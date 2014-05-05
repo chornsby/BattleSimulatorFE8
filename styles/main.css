@@ -1,0 +1,14 @@
+.unit {
+    float: left;
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#attacker {
+    background-color: cornflowerblue;
+}
+
+#defender {
+    background-color: indianred;
+}
