@@ -1,0 +1,78 @@
+[
+    {
+        "name":"Plain",
+        "defence":0,
+        "avoid":0,
+        "heal":0
+    },
+
+    {
+        "name":"Desert",
+        "defence":0,
+        "avoid":5,
+        "heal":0
+    },
+
+    {
+        "name":"Forest",
+        "defence":1,
+        "avoid":20,
+        "heal":0
+    },
+
+    {
+        "name":"Fort",
+        "defence":2,
+        "avoid":20,
+        "heal":20
+    },
+
+    {
+        "name":"Gate",
+        "defence":3,
+        "avoid":30,
+        "heal":10
+    },
+
+    {
+        "name":"House",
+        "defence":0,
+        "avoid":10,
+        "heal":0
+    },
+
+    {
+        "name":"Mountain",
+        "defence":1,
+        "avoid":30,
+        "heal":0
+    },
+
+    {
+        "name":"Peak",
+        "defence":2,
+        "avoid":40,
+        "heal":0
+    },
+
+    {
+        "name":"Pillar",
+        "defence":1,
+        "avoid":20,
+        "heal":0
+    },
+
+    {
+        "name":"Throne",
+        "defence":3,
+        "avoid":30,
+        "heal":10
+    },
+
+    {
+        "name":"Village",
+        "defence":0,
+        "avoid":10,
+        "heal":0
+    }
+]

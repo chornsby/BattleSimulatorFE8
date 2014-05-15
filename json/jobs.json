@@ -1,0 +1,33 @@
+[
+    {
+        "name":"Eirika Lord",
+        "infantry":false,
+        "flying":false,
+        "mounted":false,
+        "lethal":false
+    },
+
+    {
+        "name":"Ephraim Lord",
+        "infantry":false,
+        "flying":false,
+        "mounted":false,
+        "lethal":false
+    },
+
+    {
+        "name":"Fighter",
+        "infantry":false,
+        "flying":false,
+        "mounted":false,
+        "lethal":false
+    },
+
+    {
+        "name":"Paladin",
+        "infantry":false,
+        "flying":false,
+        "mounted":true,
+        "lethal":false
+    }
+]

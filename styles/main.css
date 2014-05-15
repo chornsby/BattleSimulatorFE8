@@ -1,6 +1,6 @@
-.unit {
+.unit-container {
     float: left;
-    height: 200px;
+    height: 400px;
     width: 200px;
     border-radius: 5px;
 }
@@ -11,4 +11,23 @@
 
 #defender {
     background-color: indianred;
+}
+
+.buttons-container {
+    float: left;
+    height: 400px;
+    width: 130px;
+}
+
+.unit-input {
+    float: left;
+    clear: both;
+    height: 50px;
+    width: 530px;
+}
+
+.unit-input > label {
+    float: left;
+    clear: left;
+    /*margin: auto;*/
 }

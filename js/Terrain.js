@@ -1,9 +1,6 @@
-function Terrain(terrainType, defence, avoid) {
-    this.terrainType = terrainType;
-    this.defence = defence;
-    this.avoid = avoid;
+function Terrain(terrainJSON) {
+    this.name = terrainJSON.name;
+    this.defence = terrainJSON.defence;
+    this.avoid = terrainJSON.avoid;
+    this.heal = terrainJSON.heal;
 }
-
-var Forest = new Terrain("forest", 1, 20);
-var Fort = new Terrain("fort", 2, 20);
-var Plain = new Terrain("plain", 0, 0);

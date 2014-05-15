@@ -1,0 +1,222 @@
+[
+    {
+        "name":"Iron Sword",
+        "weaponType":"sword",
+        "rank":0,
+        "uses":46,
+        "weight":5,
+        "might":5,
+        "hit":90,
+        "crit":0,
+        "exp":1,
+        "cost":460
+    },
+
+    {
+        "name":"Slim Sword",
+        "weaponType":"sword",
+        "rank":0,
+        "uses":30,
+        "weight":2,
+        "might":3,
+        "hit":100,
+        "crit":5,
+        "exp":1,
+        "cost":480
+    },
+
+    {
+        "name":"Steel Sword",
+        "weaponType":"sword",
+        "rank":1,
+        "uses":30,
+        "weight":10,
+        "might":8,
+        "hit":75,
+        "crit":0,
+        "exp":1,
+        "cost":600
+    },
+
+    {
+        "name":"Silver Sword",
+        "weaponType":"sword",
+        "rank":4,
+        "uses":20,
+        "weight":8,
+        "might":13,
+        "hit":80,
+        "crit":0,
+        "exp":1,
+        "cost":1500
+    },
+
+    {
+        "name":"Iron Blade",
+        "weaponType":"sword",
+        "rank":1,
+        "uses":35,
+        "weight":12,
+        "might":9,
+        "hit":70,
+        "crit":0,
+        "exp":2,
+        "cost":980
+    },
+
+    {
+        "name":"Steel Blade",
+        "weaponType":"sword",
+        "rank":2,
+        "uses":25,
+        "weight":14,
+        "might":11,
+        "hit":65,
+        "crit":0,
+        "exp":2,
+        "cost":980
+    },
+
+    {
+        "name":"Silver Blade",
+        "weaponType":"sword",
+        "rank":4,
+        "uses":15,
+        "weight":13,
+        "might":14,
+        "hit":60,
+        "crit":0,
+        "exp":2,
+        "cost":1800
+    },
+
+    {
+        "name":"Killing Edge",
+        "weaponType":"sword",
+        "rank":2,
+        "uses":20,
+        "weight":7,
+        "might":9,
+        "hit":75,
+        "crit":30,
+        "exp":1,
+        "cost":1300
+    },
+
+    {
+        "name":"Iron Lance",
+        "weaponType":"lance",
+        "rank":0,
+        "uses":45,
+        "weight":8,
+        "might":7,
+        "hit":80,
+        "crit":0,
+        "exp":1,
+        "cost":360
+    },
+
+    {
+        "name":"Slim Lance",
+        "weaponType":"lance",
+        "rank":0,
+        "uses":30,
+        "weight":4,
+        "might":4,
+        "hit":85,
+        "crit":5,
+        "exp":1,
+        "cost":420
+    },
+
+    {
+        "name":"Steel Lance",
+        "weaponType":"lance",
+        "rank":1,
+        "uses":30,
+        "weight":13,
+        "might":10,
+        "hit":70,
+        "crit":0,
+        "exp":2,
+        "cost":480
+    },
+
+    {
+        "name":"Silver Lance",
+        "weaponType":"lance",
+        "rank":4,
+        "uses":20,
+        "weight":10,
+        "might":14,
+        "hit":75,
+        "crit":0,
+        "exp":1,
+        "cost":1200
+    },
+
+    {
+        "name":"Killer Lance",
+        "weaponType":"lance",
+        "rank":2,
+        "uses":20,
+        "weight":9,
+        "might":10,
+        "hit":70,
+        "crit":30,
+        "exp":1,
+        "cost":1200
+    },
+
+    {
+        "name":"Iron Axe",
+        "weaponType":"axe",
+        "rank":0,
+        "uses":45,
+        "weight":10,
+        "might":8,
+        "hit":75,
+        "crit":0,
+        "exp":1,
+        "cost":270
+    },
+
+    {
+        "name":"Steel Axe",
+        "weaponType":"axe",
+        "rank":0,
+        "uses":30,
+        "weight":15,
+        "might":11,
+        "hit":65,
+        "crit":0,
+        "exp":2,
+        "cost":360
+    },
+
+    {
+        "name":"Silver Axe",
+        "weaponType":"axe",
+        "rank":4,
+        "uses":20,
+        "weight":12,
+        "might":15,
+        "hit":70,
+        "crit":0,
+        "exp":1,
+        "cost":1000
+    },
+
+    {
+        "name":"Killer Axe",
+        "weaponType":"axe",
+        "rank":2,
+        "uses":20,
+        "weight":11,
+        "might":11,
+        "hit":65,
+        "crit":30,
+        "exp":1,
+        "cost":1000
+    }
+]

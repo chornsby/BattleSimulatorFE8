@@ -7,16 +7,84 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/Misc.js"></script>
     <script type="text/javascript" src="js/Terrain.js"></script>
     <script type="text/javascript" src="js/Weapon.js"></script>
+    <script type="text/javascript" src="js/WeaponSkill.js"></script>
+    <script type="text/javascript" src="js/Job.js"></script>
     <script type="text/javascript" src="js/Unit.js"></script>
-    <script type="text/javascript" src="js/Characters.js"></script>
     <script type="text/javascript" src="js/Battle.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-    <div id="defender" class="unit"></div>
-    <div id="attacker" class="unit"></div>
-    <button id="fight" type="button">FIGHT!</button>
-    <button id="reset" type="button">RESET!</button>
+    <div id="attacker" class="unit-container">
+        <h3 class="unit-name"></h3>
+        <img class="unit-portrait">
+        <img class="weapon-type">
+        <img class="weapon-name">
+        <p class="weapon-info"></p>
+        <p class="repeat-attack"></p>
+        <p class="hp"></p>
+        <p class="might"></p>
+        <p class="accuracy"></p>
+        <p class="critical"></p>
+        <img class="map-sprite">
+    </div>
+
+    <div class="buttons-container">
+        <button id="fight" type="button">FIGHT!</button>
+        <button id="reset" type="button">RESET!</button>
+    </div>
+
+    <div id="defender" class="unit-container">
+        <h3 class="unit-name"></h3>
+        <img class="unit-portrait">
+        <img class="weapon-type">
+        <img class="weapon-name">
+        <p class="weapon-info"></p>
+        <p class="repeat-attack"></p>
+        <p class="hp"></p>
+        <p class="might"></p>
+        <p class="accuracy"></p>
+        <p class="critical"></p>
+        <img class="map-sprite">
+    </div>
+
+    <div class="unit-input">
+        <div id="unit1">
+            <label>
+                Attacker:
+                <select id="unit1-unit-dropdown">
+                </select>
+            </label>
+            <label>
+                <select id="unit1-weapon-dropdown">
+                </select>
+            </label>
+            <label>
+                <select id="unit1-terrain-dropdown">
+                </select>
+            </label>
+        </div>
+        <div id="unit2">
+            <label>
+                Defender:
+                <select id="unit2-unit-dropdown">
+                </select>
+            </label>
+            <label>
+                <select id="unit2-weapon-dropdown">
+                </select>
+            </label>
+            <label>
+                <select id="unit2-terrain-dropdown">
+                </select>
+            </label>
+        </div>
+    </div>
+    <div>
+        <textarea id="battle-log" rows="8" cols="60"></textarea>
+    </div>
+
 </body>
 </html>

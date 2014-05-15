@@ -1,0 +1,236 @@
+[
+    {
+        "name":"Eirika",
+
+        "job":"Eirika Lord",
+
+        "HP":16,
+        "power":4,
+        "skill":8,
+        "speed":9,
+        "luck":5,
+        "defence":3,
+        "resistance":1,
+        "constitution":5,
+
+        "weaponSkill":{
+            "sword":1,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Seth",
+
+        "job":"Paladin",
+
+        "HP":30,
+        "power":14,
+        "skill":13,
+        "speed":12,
+        "luck":13,
+        "defence":11,
+        "resistance":8,
+        "constitution":11,
+
+        "weaponSkill":{
+            "sword":5,
+            "lance":5,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Franz",
+
+        "job":"Cavalier",
+
+        "HP":20,
+        "power":7,
+        "skill":5,
+        "speed":7,
+        "luck":2,
+        "defence":6,
+        "resistance":1,
+        "constitution":9,
+
+        "weaponSkill":{
+            "sword":1,
+            "lance":2,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Gilliam",
+
+        "job":"Knight",
+
+        "HP":25,
+        "power":9,
+        "skill":6,
+        "speed":3,
+        "luck":3,
+        "defence":9,
+        "resistance":3,
+        "constitution":14,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":3,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Vanessa",
+
+        "job":"Pegasus Knight",
+
+        "HP":17,
+        "power":9,
+        "skill":7,
+        "speed":11,
+        "luck":4,
+        "defence":6,
+        "resistance":5,
+        "constitution":5,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":2,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Ross",
+
+        "job":"Journeyman",
+
+        "HP":15,
+        "power":5,
+        "skill":2,
+        "speed":3,
+        "luck":8,
+        "defence":3,
+        "resistance":0,
+        "constitution":8,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":1,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Garcia",
+
+        "job":"Fighter",
+
+        "HP":28,
+        "power":8,
+        "skill":7,
+        "speed":7,
+        "luck":3,
+        "defence":5,
+        "resistance":1,
+        "constitution":14,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":3,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Ephraim",
+
+        "job":"Ephraim Lord",
+
+        "HP":23,
+        "power":8,
+        "skill":9,
+        "speed":11,
+        "luck":8,
+        "defence":7,
+        "resistance":2,
+        "constitution":8,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":2,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"O'Neill",
+
+        "job":"Fighter",
+
+        "HP":23,
+        "maxHP":23,
+        "power":6,
+        "skill":4,
+        "speed":7,
+        "luck":0,
+        "defence":2,
+        "resistance":0,
+        "constitution":11,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":3,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    }
+]
