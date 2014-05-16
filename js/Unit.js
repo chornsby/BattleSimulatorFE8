@@ -13,7 +13,6 @@ function Unit(characterJSON) {
     this.constitution = characterJSON.constitution;
     this.weaponSkill = characterJSON.weaponSkill;
 
-    // TODO: Fix this to be the right weapon for each character? Or leave unfilled?
     this.weapon = null;
     this.terrain = null;
 
@@ -97,7 +96,9 @@ function Unit(characterJSON) {
         var luckTerm = Math.floor(0.5 * this.luck);
         var sRankBonus = 0;
 
-        /* TODO: Implement s-rank bonus. */
+        if (this.weaponSkill[this.weapon.weaponType] === 6) {
+            sRankBonus = 5;
+        }
 
         return weaponAccuracy + skillTerm + luckTerm + sRankBonus;
     };
@@ -132,7 +133,9 @@ function Unit(characterJSON) {
 
         var sRankBonus = 0;
 
-        /* TODO: Implement s-rank bonus. */
+        if (this.weaponSkill[this.weapon.weaponType] === 6) {
+            sRankBonus = 5;
+        }
 
         return weaponCritical + skillTerm + classCritical + sRankBonus;
     };
