@@ -4,16 +4,23 @@ var Battle = function(unit1, unit2, logToBattle) {
     this.attacker = unit1;
     this.defender = unit2;
     this.logToBattle = logToBattle;
+    this.hasWon = false;
     
     this.battleOver = function() {
         // Return true if battle is not over.
+        if (this.hasWon) {
+            return true;
+        }
+
         if (this.attacker.HP < 1) {
             this.logToBattle("Defender " + this.defender.name + " wins!");
+            this.hasWon = true;
             return true;
         }
 
         if (this.defender.HP < 1) {
             this.logToBattle("Attacker " + this.attacker.name + " wins!");
+            this.hasWon = true;
             return true;
         }
 
