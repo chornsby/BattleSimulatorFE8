@@ -59,8 +59,8 @@ $(document).ready(function() {
         $battleLog.val($battleLog.val() + text + "\n");
     };
     
-    var showIndividualData = function($div, unitA, unitB) {
-        $div.eq(0).text("Attacker: " + unitA.name);
+    var showIndividualData = function(descriptor, $div, unitA, unitB) {
+        $div.eq(0).text(descriptor + ": " + unitA.name);
         $div.eq(1).attr("src", "images/portraits/" + unitA.name + ".gif");
         $div.eq(2).attr("src", "images/weapon_groups/" + unitA.weapon.weaponType + ".gif");
         $div.eq(3).attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
@@ -74,8 +74,8 @@ $(document).ready(function() {
     };
 
     var showData = function ($div1, $div2, unit1, unit2) {
-        showIndividualData($div1, unit1, unit2);
-        showIndividualData($div2, unit2, unit1);
+        showIndividualData("Attacker", $div1, unit1, unit2);
+        showIndividualData("Defender", $div2, unit2, unit1);
     };
 
     var resetHealths = function () {
@@ -165,6 +165,7 @@ $(document).ready(function() {
 
     $reset.click(function () {
         resetHealths();
+        battle = new Battle(unit1, unit2, logToBattle);
         showData($attacker, $defender, unit1, unit2);
     });
 
