@@ -58,31 +58,24 @@ $(document).ready(function() {
         // Append the given text to the $battleLog textarea.
         $battleLog.val($battleLog.val() + text + "\n");
     };
+    
+    var showIndividualData = function($div, unitA, unitB) {
+        $div.eq(0).text("Attacker: " + unitA.name);
+        $div.eq(1).attr("src", "images/portraits/" + unitA.name + ".gif");
+        $div.eq(2).attr("src", "images/weapon_groups/" + unitA.weapon.weaponType + ".gif");
+        $div.eq(3).attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
+        $div.eq(4).text(unitA.weapon.name + " " + unitA.weaponTriangleBonus(unitB));
+        $div.eq(5).text("2x? " + unitA.isRepeatedAttack(unitB));
+        $div.eq(6).text("HP " + unitA.HP + "/" + unitA.maxHP);
+        $div.eq(7).text("Mt " + unitA.damage(unitB));
+        $div.eq(8).text("Hit " + unitA.accuracy(unitB));
+        $div.eq(9).text("Crit " + unitA.criticalChance(unitB));
+        $div.eq(10).attr("src", "images/map_sprites/" + unitA.job + ".gif");
+    };
 
     var showData = function ($div1, $div2, unit1, unit2) {
-        $div1.eq(0).text("Attacker: " + unit1.name);
-        $div1.eq(1).attr("src", "images/portraits/" + unit1.name + ".gif");
-        $div1.eq(2).attr("src", "images/weapon_groups/" + unit1.weapon.weaponType + ".gif");
-        $div1.eq(3).attr("src", "images/weapons/" + unit1.weapon.name + ".gif");
-        $div1.eq(4).text(unit1.weapon.name + " " + unit1.weaponTriangleBonus(unit2));
-        $div1.eq(5).text("2x? " + unit1.isRepeatedAttack(unit2));
-        $div1.eq(6).text("HP " + unit1.HP + "/" + unit1.maxHP);
-        $div1.eq(7).text("Mt " + unit1.damage(unit2));
-        $div1.eq(8).text("Hit " + unit1.accuracy(unit2));
-        $div1.eq(9).text("Crit " + unit1.criticalChance(unit2));
-        $div1.eq(10).attr("src", "images/map_sprites/" + unit1.job + ".gif");
-
-        $div2.eq(0).text("Defender: " + unit2.name);
-        $div2.eq(1).attr("src", "images/portraits/" + unit2.name + ".gif");
-        $div2.eq(2).attr("src", "images/weapon_groups/" + unit2.weapon.weaponType + ".gif");
-        $div2.eq(3).attr("src", "images/weapons/" + unit2.weapon.name + ".gif");
-        $div2.eq(4).text(unit2.weapon.name + " " + unit2.weaponTriangleBonus(unit1));
-        $div2.eq(5).text("2x? " + unit2.isRepeatedAttack(unit1));
-        $div2.eq(6).text("HP " + unit2.HP + "/" + unit2.maxHP);
-        $div2.eq(7).text("Mt " + unit2.damage(unit1));
-        $div2.eq(8).text("Hit " + unit2.accuracy(unit1));
-        $div2.eq(9).text("Crit " + unit2.criticalChance(unit1));
-        $div2.eq(10).attr("src", "images/map_sprites/" + unit2.job + ".gif");
+        showIndividualData($div1, unit1, unit2);
+        showIndividualData($div2, unit2, unit1);
     };
 
     var resetHealths = function () {
@@ -107,21 +100,39 @@ $(document).ready(function() {
     var updateWeaponDropdown = function (unit, $dropdownSelector) {
         // Update the dropdown options as a side effect.
         var i;
+        var optgroup;
 
         if (unit.weaponSkill.sword > 0) {
+            optgroup = $('<optgroup>');
+            optgroup.attr('label', "Swords");
+
             for (i = 0; i < Swords.length; i++) {
-                $dropdownSelector.append(new Option(Swords[i], Swords[i]))
+                optgroup.append(new Option(Swords[i], Swords[i]));
             }
+
+            $dropdownSelector.append(optgroup);
         }
+
         if (unit.weaponSkill.axe > 0) {
+            optgroup = $('<optgroup>');
+            optgroup.attr('label', "Axes");
+
             for (i = 0; i < Axes.length; i++) {
-                $dropdownSelector.append(new Option(Axes[i], Axes[i]))
+                optgroup.append(new Option(Axes[i], Axes[i]));
             }
+
+            $dropdownSelector.append(optgroup);
         }
+
         if (unit.weaponSkill.lance > 0) {
+            optgroup = $('<optgroup>');
+            optgroup.attr('label', "Lances");
+
             for (i = 0; i < Lances.length; i++) {
-                $dropdownSelector.append(new Option(Lances[i], Lances[i]))
+                optgroup.append(new Option(Lances[i], Lances[i]));
             }
+
+            $dropdownSelector.append(optgroup);
         }
         /* TODO: Finish for other weapons and magic. */
     };
