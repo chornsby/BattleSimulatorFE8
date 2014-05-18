@@ -3,10 +3,14 @@ function Weapon(weaponJSON) {
     this.name = weaponJSON.name;
     this.weaponType = weaponJSON.weaponType;
     this.rank = weaponJSON.rank;
+    this.uses = weaponJSON.uses;
+    this.maxUses = weaponJSON.uses;
+    this.weight = weaponJSON.weight;
     this.might = weaponJSON.might;
     this.hit = weaponJSON.hit;
     this.crit = weaponJSON.crit;
-    this.weight = weaponJSON.weight;
+    this.weaponExp = weaponJSON.weaponExp;
+    this.cost = weaponJSON.cost;
 
     var physicalTypes = ["sword", "lance", "axe"];
     var magicTypes = ["anima", "dark", "light"];
