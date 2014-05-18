@@ -2,6 +2,7 @@ function Weapon(weaponJSON) {
 
     this.name = weaponJSON.name;
     this.weaponType = weaponJSON.weaponType;
+    this.rank = weaponJSON.rank;
     this.might = weaponJSON.might;
     this.hit = weaponJSON.hit;
     this.crit = weaponJSON.crit;
