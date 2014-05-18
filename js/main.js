@@ -8,6 +8,7 @@ $(document).ready(function() {
     var Terrains = {};
 
     // TODO: Use callbacks to avoid forcing synchronous requests.
+    // TODO: Check whether all have completed only on increment of tally.
     $.ajaxSetup({
         async: false
     });
@@ -18,6 +19,7 @@ $(document).ready(function() {
         }
     });
 
+    // TODO: Implement jobs properly.
 //    $.getJSON("json/jobs.json", function (data) {
 //        for (var i = 0; i < data.length; i++) {
 //            Jobs[data[i].name] = new Job(data[i]);
@@ -103,33 +105,33 @@ $(document).ready(function() {
         var optgroup;
 
         if (unit.weaponSkill.sword > 0) {
-            optgroup = $('<optgroup>');
-            optgroup.attr('label', "Swords");
+            optgroup = $('<optgroup label="Swords">');
 
             for (i = 0; i < Swords.length; i++) {
-                optgroup.append(new Option(Swords[i], Swords[i]));
+                if (unit.weaponSkill.sword > Weapons[Swords[i]].rank)
+                    optgroup.append(new Option(Swords[i], Swords[i]));
             }
 
             $dropdownSelector.append(optgroup);
         }
 
         if (unit.weaponSkill.axe > 0) {
-            optgroup = $('<optgroup>');
-            optgroup.attr('label', "Axes");
+            optgroup = $('<optgroup label="Axes">');
 
             for (i = 0; i < Axes.length; i++) {
-                optgroup.append(new Option(Axes[i], Axes[i]));
+                if (unit.weaponSkill.axe > Weapons[Axes[i]].rank)
+                    optgroup.append(new Option(Axes[i], Axes[i]));
             }
 
             $dropdownSelector.append(optgroup);
         }
 
         if (unit.weaponSkill.lance > 0) {
-            optgroup = $('<optgroup>');
-            optgroup.attr('label', "Lances");
+            optgroup = $('<optgroup label="Lances">');
 
             for (i = 0; i < Lances.length; i++) {
-                optgroup.append(new Option(Lances[i], Lances[i]));
+                if (unit.weaponSkill.lance > Weapons[Lances[i]].rank)
+                    optgroup.append(new Option(Lances[i], Lances[i]));
             }
 
             $dropdownSelector.append(optgroup);
