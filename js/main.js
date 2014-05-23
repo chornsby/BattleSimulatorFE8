@@ -138,7 +138,55 @@ $(document).ready(function() {
 
             $dropdownSelector.append(optgroup);
         }
-        /* TODO: Finish for other weapons and magic. */
+
+        if (unit.weaponSkill.bow > 0) {
+            optgroup = $('<optgroup label="Bows">');
+
+            for (weapon in Weapons) {
+                if (Weapons[weapon].weaponType === "bow") {
+                    optgroup.append(new Option(weapon, weapon));
+                }
+            }
+
+            $dropdownSelector.append(optgroup);
+        }
+
+        if (unit.weaponSkill.anima > 0) {
+            optgroup = $('<optgroup label="Anima Magic">');
+
+            for (weapon in Weapons) {
+                if (Weapons[weapon].weaponType === "anima") {
+                    optgroup.append(new Option(weapon, weapon));
+                }
+            }
+
+            $dropdownSelector.append(optgroup);
+        }
+
+        if (unit.weaponSkill.dark > 0) {
+            optgroup = $('<optgroup label="Dark Magic">');
+
+            for (weapon in Weapons) {
+                if (Weapons[weapon].weaponType === "dark") {
+                    optgroup.append(new Option(weapon, weapon));
+                }
+            }
+
+            $dropdownSelector.append(optgroup);
+        }
+
+        if (unit.weaponSkill.light > 0) {
+            optgroup = $('<optgroup label="Light Magic">');
+
+            for (weapon in Weapons) {
+                if (Weapons[weapon].weaponType === "light") {
+                    optgroup.append(new Option(weapon, weapon));
+                }
+            }
+
+            $dropdownSelector.append(optgroup);
+        }
+
     };
 
     var unit1 = Characters["Eirika"].copy();
