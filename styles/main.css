@@ -23,6 +23,8 @@ TODO: Fit layout to align with plan.
     float: left;
     height: 400px;
     width: 75px;
+
+    text-align: center;
 }
 
 button {
