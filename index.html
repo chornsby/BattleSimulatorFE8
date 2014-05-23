@@ -33,12 +33,13 @@ TODO: Add input access to unit stats variables.
             <img class="unit-portrait" src="">
         </div>
 
-        <img class="weapon-type" src="">
-        <img class="weapon-name" src="">
-        <p class="weapon-info">
+        <div class="weapon-info">
             <label for="unit1-weapon-dropdown"></label>
             <select id="unit1-weapon-dropdown"></select>
-        </p>
+            <img class="weapon-type" src="">
+            <img class="weapon-name" src="">
+        </div>
+
         <p class="repeat-attack"></p>
 
         <p class="hp"></p>
@@ -60,19 +61,20 @@ TODO: Add input access to unit stats variables.
     <div id="defender" class="unit-container">
         
         <h3 class="unit-name">
-            <label for="unit2-unit-dropdown">Attacker:</label>
+            <label for="unit2-unit-dropdown">Defender:</label>
             <select id="unit2-unit-dropdown"></select>
         </h3>
         <div class="unit-portrait-container">
             <img class="unit-portrait" src="">
         </div>
 
-        <img class="weapon-type" src="">
-        <img class="weapon-name" src="">
-        <p class="weapon-info">
+        <div class="weapon-info">
             <label for="unit2-weapon-dropdown"></label>
             <select id="unit2-weapon-dropdown"></select>
-        </p>
+            <img class="weapon-type" src="">
+            <img class="weapon-name" src="">
+        </div>
+
         <p class="repeat-attack"></p>
 
         <p class="hp"></p>
@@ -87,7 +89,8 @@ TODO: Add input access to unit stats variables.
     </div>
 
     <div id="battle-log-container">
-        <label for="battle-log"></label><textarea id="battle-log" rows="8" cols="60"></textarea>
+        <label for="battle-log"></label>
+        <textarea id="battle-log" rows="8" cols="64"></textarea>
     </div>
 
 </body>

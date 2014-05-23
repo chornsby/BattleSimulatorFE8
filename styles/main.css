@@ -4,7 +4,7 @@ TODO: Fit layout to align with plan.
 
 .unit-container {
     float: left;
-    height: 450px;
+    height: 410px;
     width: 200px;
     border-radius: 5px;
 }
@@ -26,6 +26,11 @@ TODO: Fit layout to align with plan.
 .unit-portrait-container {
     height: 100px;
     width: 100px;
+}
+
+.unit-portrait {
+    display: block;
+    margin: auto;
 }
 
 .unit-input {
