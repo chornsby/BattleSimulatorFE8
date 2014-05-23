@@ -8,6 +8,8 @@
         "might":5,
         "hit":90,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":460
     },
@@ -21,6 +23,8 @@
         "might":3,
         "hit":100,
         "crit":5,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":480
     },
@@ -34,6 +38,8 @@
         "might":8,
         "hit":75,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":600
     },
@@ -47,6 +53,8 @@
         "might":13,
         "hit":80,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":1500
     },
@@ -60,6 +68,8 @@
         "might":9,
         "hit":70,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":2,
         "cost":980
     },
@@ -73,6 +83,8 @@
         "might":11,
         "hit":65,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":2,
         "cost":980
     },
@@ -86,6 +98,8 @@
         "might":14,
         "hit":60,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":2,
         "cost":1800
     },
@@ -99,6 +113,8 @@
         "might":9,
         "hit":75,
         "crit":30,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":1300
     },
@@ -112,6 +128,8 @@
         "might":7,
         "hit":80,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":360
     },
@@ -125,6 +143,8 @@
         "might":4,
         "hit":85,
         "crit":5,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":420
     },
@@ -138,6 +158,8 @@
         "might":10,
         "hit":70,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":2,
         "cost":480
     },
@@ -151,6 +173,8 @@
         "might":14,
         "hit":75,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":1200
     },
@@ -164,6 +188,8 @@
         "might":10,
         "hit":70,
         "crit":30,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":1200
     },
@@ -177,6 +203,8 @@
         "might":8,
         "hit":75,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":270
     },
@@ -190,6 +218,8 @@
         "might":11,
         "hit":65,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":2,
         "cost":360
     },
@@ -203,6 +233,8 @@
         "might":15,
         "hit":70,
         "crit":0,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":1000
     },
@@ -216,7 +248,69 @@
         "might":11,
         "hit":65,
         "crit":30,
+        "minRange":1,
+        "maxRange":1,
         "weaponExp":1,
         "cost":1000
+    },
+
+    {
+        "name":"Iron Bow",
+        "weaponType":"bow",
+        "rank":0,
+        "uses":45,
+        "weight":5,
+        "might":6,
+        "hit":85,
+        "crit":0,
+        "minRange":2,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":540
+    },
+
+    {
+        "name":"Steel Bow",
+        "weaponType":"bow",
+        "rank":1,
+        "uses":30,
+        "weight":9,
+        "might":9,
+        "hit":70,
+        "crit":0,
+        "minRange":2,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":720
+    },
+
+    {
+        "name":"Silver Bow",
+        "weaponType":"bow",
+        "rank":4,
+        "uses":20,
+        "weight":6,
+        "might":13,
+        "hit":75,
+        "crit":0,
+        "minRange":2,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":1600
+    },
+
+    {
+        "name":"Killer Bow",
+        "weaponType":"bow",
+        "rank":2,
+        "uses":20,
+        "weight":7,
+        "might":9,
+        "hit":75,
+        "crit":30,
+        "minRange":2,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":1400
     }
 ]
