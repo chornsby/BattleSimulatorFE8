@@ -40,8 +40,8 @@ $(document).ready(function() {
         }
     });
 
-    var $attacker = $('#attacker').children();
-    var $defender = $('#defender').children();
+    var $attacker = $('#attacker');
+    var $defender = $('#defender');
 
     var $fight = $('#fight');
     var $reset = $('#reset');
@@ -62,17 +62,16 @@ $(document).ready(function() {
     };
     
     var showIndividualData = function(descriptor, $div, unitA, unitB) {
-        $div.eq(0).text(descriptor + ": " + unitA.name);
-        $div.eq(1).attr("src", "images/portraits/" + unitA.name + ".gif");
-        $div.eq(2).attr("src", "images/weapon_groups/" + unitA.weapon.weaponType + ".gif");
-        $div.eq(3).attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
-        $div.eq(4).text(unitA.weapon.name + " " + unitA.weaponTriangleBonus(unitB));
-        $div.eq(5).text("2x? " + unitA.isRepeatedAttack(unitB));
-        $div.eq(6).text("HP " + unitA.HP + "/" + unitA.maxHP);
-        $div.eq(7).text("Mt " + unitA.damage(unitB));
-        $div.eq(8).text("Hit " + unitA.accuracy(unitB));
-        $div.eq(9).text("Crit " + unitA.criticalChance(unitB));
-        $div.eq(10).attr("src", "images/map_sprites/" + unitA.job + ".gif");
+        $div.find('.unit-portrait').attr("src", "images/portraits/" + unitA.name + ".gif");
+        $div.find('.weapon-type').attr("src", "images/weapon_groups/" + unitA.weapon.weaponType + ".gif");
+        $div.find('.weapon-name').attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
+//        $div.eq(4).text(unitA.weapon.name + " " + unitA.weaponTriangleBonus(unitB));
+        $div.find('.repeat-attack').text("2x? " + unitA.isRepeatedAttack(unitB));
+        $div.find('.hp').text("HP " + unitA.HP + "/" + unitA.maxHP);
+        $div.find('.might').text("Mt " + unitA.damage(unitB));
+        $div.find('.accuracy').text("Hit " + unitA.accuracy(unitB));
+        $div.find('.critical').text("Crit " + unitA.criticalChance(unitB));
+//        $div.eq(10).attr("src", "images/map_sprites/" + unitA.job + ".gif");
     };
 
     var showData = function ($div1, $div2, unit1, unit2) {
