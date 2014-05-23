@@ -1,11 +1,10 @@
 /*
-TODO: Portrait should take up the same space for each unit.
 TODO: Fit layout to align with plan.
 */
 
 .unit-container {
     float: left;
-    height: 400px;
+    height: 450px;
     width: 200px;
     border-radius: 5px;
 }
@@ -24,6 +23,11 @@ TODO: Fit layout to align with plan.
     width: 130px;
 }
 
+.unit-portrait-container {
+    height: 100px;
+    width: 100px;
+}
+
 .unit-input {
     float: left;
     clear: both;
@@ -34,5 +38,8 @@ TODO: Fit layout to align with plan.
 .unit-input > label {
     float: left;
     clear: left;
-    /*margin: auto;*/
+}
+
+#battle-log-container {
+    clear: both;
 }
