@@ -1,4 +1,7 @@
 // TODO: Separate game logic from rendering to page.
+// TODO: Fix physical vs magic calculations...
+// TODO: Add support for distance separation.
+// TODO: Include effects of Luna and Nosferatu.
 
 var Battle = function(unit1, unit2, logToBattle) {
     this.attacker = unit1;
