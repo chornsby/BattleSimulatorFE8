@@ -59,13 +59,12 @@ button {
 
 .flip-horizontal {
     /*
-    Found on Stack Overflow.
+    Edited from form found on Stack Overflow.
     http://stackoverflow.com/a/1309268
     */
-    -moz-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     transform: scaleX(-1);
-    -ms-filter: fliph; /*IE*/
-    filter: fliph; /*IE*/
 }
