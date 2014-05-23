@@ -7,6 +7,8 @@ TODO: Fit layout to align with plan.
     height: 410px;
     width: 200px;
     border-radius: 5px;
+
+    text-align: center;
 }
 
 #attacker {
@@ -20,12 +22,18 @@ TODO: Fit layout to align with plan.
 .buttons-container {
     float: left;
     height: 400px;
-    width: 130px;
+    width: 75px;
+}
+
+button {
+    display: block;
+    margin: auto;
 }
 
 .unit-portrait-container {
-    height: 100px;
+    height: 90px;
     width: 100px;
+    margin: auto;
 }
 
 .unit-portrait {
@@ -47,4 +55,17 @@ TODO: Fit layout to align with plan.
 
 #battle-log-container {
     clear: both;
+}
+
+.flip-horizontal {
+    /*
+    Found on Stack Overflow.
+    http://stackoverflow.com/a/1309268
+    */
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
 }
