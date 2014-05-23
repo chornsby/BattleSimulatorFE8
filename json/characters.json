@@ -182,6 +182,110 @@
     },
 
     {
+        "name":"Neimi",
+
+        "job":"Archer",
+
+        "HP":17,
+        "power":4,
+        "skill":5,
+        "speed":6,
+        "luck":4,
+        "defence":3,
+        "resistance":2,
+        "constitution":5,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":0,
+            "bow":2,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Colm",
+
+        "job":"Thief",
+
+        "HP":18,
+        "power":4,
+        "skill":4,
+        "speed":10,
+        "luck":8,
+        "defence":3,
+        "resistance":1,
+        "constitution":6,
+
+        "weaponSkill":{
+            "sword":1,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Artur",
+
+        "job":"Monk",
+
+        "HP":19,
+        "power":6,
+        "skill":6,
+        "speed":8,
+        "luck":2,
+        "defence":2,
+        "resistance":6,
+        "constitution":6,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":1,
+            "staff":0
+        }
+    },
+
+    {
+        "name":"Lute",
+
+        "job":"Mage",
+
+        "HP":17,
+        "power":6,
+        "skill":6,
+        "speed":7,
+        "luck":8,
+        "defence":3,
+        "resistance":5,
+        "constitution":3,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":3,
+            "dark":0,
+            "light":0,
+            "staff":0
+        }
+    },
+
+    {
         "name":"Ephraim",
 
         "job":"Ephraim Lord",
