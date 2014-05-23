@@ -100,15 +100,16 @@ $(document).ready(function() {
 
     var updateWeaponDropdown = function (unit, $dropdownSelector) {
         // Update the dropdown options as a side effect.
-        var i;
+        var weapon;
         var optgroup;
 
         if (unit.weaponSkill.sword > 0) {
             optgroup = $('<optgroup label="Swords">');
 
-            for (i = 0; i < Swords.length; i++) {
-                if (unit.weaponSkill.sword > Weapons[Swords[i]].rank)
-                    optgroup.append(new Option(Swords[i], Swords[i]));
+            for (weapon in Weapons) {
+                if (Weapons[weapon].weaponType === "sword") {
+                    optgroup.append(new Option(weapon, weapon));
+                }
             }
 
             $dropdownSelector.append(optgroup);
@@ -117,9 +118,10 @@ $(document).ready(function() {
         if (unit.weaponSkill.axe > 0) {
             optgroup = $('<optgroup label="Axes">');
 
-            for (i = 0; i < Axes.length; i++) {
-                if (unit.weaponSkill.axe > Weapons[Axes[i]].rank)
-                    optgroup.append(new Option(Axes[i], Axes[i]));
+            for (weapon in Weapons) {
+                if (Weapons[weapon].weaponType === "axe") {
+                    optgroup.append(new Option(weapon, weapon));
+                }
             }
 
             $dropdownSelector.append(optgroup);
@@ -128,9 +130,10 @@ $(document).ready(function() {
         if (unit.weaponSkill.lance > 0) {
             optgroup = $('<optgroup label="Lances">');
 
-            for (i = 0; i < Lances.length; i++) {
-                if (unit.weaponSkill.lance > Weapons[Lances[i]].rank)
-                    optgroup.append(new Option(Lances[i], Lances[i]));
+            for (weapon in Weapons) {
+                if (Weapons[weapon].weaponType === "lance") {
+                    optgroup.append(new Option(weapon, weapon));
+                }
             }
 
             $dropdownSelector.append(optgroup);

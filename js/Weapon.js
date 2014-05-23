@@ -50,11 +50,3 @@ function Weapon(weaponJSON) {
         }
     }
 }
-
-var Swords = ["Iron Sword", "Slim Sword", "Steel Sword", "Silver Sword",
-    "Iron Blade", "Steel Blade", "Silver Blade", "Killing Edge"];
-var Lances = ["Iron Lance", "Slim Lance", "Steel Lance", "Silver Lance",
-    "Killer Lance"];
-var Axes   = ["Iron Axe", "Steel Axe", "Silver Axe", "Killer Axe"];
-
-
