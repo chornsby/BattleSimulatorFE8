@@ -46,11 +46,11 @@ var Battle = function(unit1, unit2, logToBattle) {
             if (percentChance() < attackerCriticalChance) {
                 this.defender.HP -= attackerDamage * 3;
                 this.defender.normaliseHP();
-                this.logToBattle("Attacker " + this.attacker.name + " scores a critical hit! " + attackerDamage * 3);
+                this.logToBattle("Attacker " + this.attacker.name + " scores a critical hit for " + attackerDamage * 3 + " damage!");
             } else {
                 this.defender.HP -= attackerDamage;
                 this.defender.normaliseHP();
-                this.logToBattle("Attacker " + this.attacker.name + " scores a hit. " + attackerDamage);
+                this.logToBattle("Attacker " + this.attacker.name + " scores a hit for " + attackerDamage + " damage.");
             }
 
         } else {
@@ -65,11 +65,11 @@ var Battle = function(unit1, unit2, logToBattle) {
             if (percentChance() < defenderCriticalChance) {
                 this.attacker.HP -= defenderDamage * 3;
                 this.attacker.normaliseHP();
-                this.logToBattle("Defender " + this.defender.name + " scores a critical hit! " + defenderDamage * 3);
+                this.logToBattle("Defender " + this.defender.name + " scores a critical hit for " + defenderDamage * 3 + " damage!");
             } else {
                 this.attacker.HP -= defenderDamage;
                 this.attacker.normaliseHP();
-                this.logToBattle("Defender " + this.defender.name + " scores a hit. " + defenderDamage);
+                this.logToBattle("Defender " + this.defender.name + " scores a hit for " + defenderDamage + " damage.");
             }
 
         } else {
@@ -86,11 +86,11 @@ var Battle = function(unit1, unit2, logToBattle) {
                 if (percentChance() < attackerCriticalChance) {
                     this.defender.HP -= attackerDamage * 3;
                     this.defender.normaliseHP();
-                    this.logToBattle("Attacker " + this.attacker.name + " scores a critical hit! " + attackerDamage * 3);
+                    this.logToBattle("Attacker " + this.attacker.name + " scores a critical hit for " + attackerDamage * 3 + " damage!");
                 } else {
                     this.defender.HP -= attackerDamage;
                     this.defender.normaliseHP();
-                    this.logToBattle("Attacker " + this.attacker.name + " scores a hit. " + attackerDamage);
+                    this.logToBattle("Attacker " + this.attacker.name + " scores a hit for " + attackerDamage + " damage.");
                 }
 
             } else {
@@ -108,11 +108,11 @@ var Battle = function(unit1, unit2, logToBattle) {
                 if (percentChance() < defenderCriticalChance) {
                     this.attacker.HP -= defenderDamage * 3;
                     this.attacker.normaliseHP();
-                    this.logToBattle("Defender " + this.defender.name + " scores a critical hit! " + defenderDamage * 3);
+                    this.logToBattle("Defender " + this.defender.name + " scores a critical hit for " + defenderDamage * 3 + " damage!");
                 } else {
                     this.attacker.HP -= defenderDamage;
                     this.attacker.normaliseHP();
-                    this.logToBattle("Defender " + this.defender.name + " scores a hit. " + defenderDamage);
+                    this.logToBattle("Defender " + this.defender.name + " scores a hit for " + defenderDamage + " damage.");
                 }
 
             } else {
@@ -141,8 +141,5 @@ var Battle = function(unit1, unit2, logToBattle) {
 
             this.logToBattle("Defender " + this.defender.name + " was healed for a max of " + healing + ".");
         }
-
-        console.log(this.defender.terrain, this.defender.terrain.heal)
-
     };
 };
