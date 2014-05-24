@@ -16,7 +16,7 @@ function Weapon(weaponJSON) {
 
     this.effectiveAgainst = weaponJSON.effectiveAgainst;
 
-    var physicalTypes = ["sword", "lance", "axe"];
+    var physicalTypes = ["sword", "lance", "axe", "bow"];
     var magicTypes = ["anima", "dark", "light"];
 
     this.isPhysical = function() {

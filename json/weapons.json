@@ -403,7 +403,7 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":["Armoured"],
+        "effectiveAgainst":["Knight", "General", "Great Knight"],
 
         "statBoosts":{
             "power":0,
@@ -435,7 +435,7 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":["Wyvern"],
+        "effectiveAgainst":["Wyvern Rider", "Wyvern Lord", "Wyvern Knight"],
 
         "statBoosts":{
             "power":0,
@@ -499,7 +499,9 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":["Mounted"],
+        "effectiveAgainst":["Eirika Great Lord", "Ephraim Great Lord", "Ranger",
+            "Cavalier", "Paladin", "Great Knight", "Troubadour", "Valkyrie",
+            "Mage Knight"],
 
         "statBoosts":{
             "power":0,
@@ -800,6 +802,72 @@
     },
 
     {
+        "name":"Horseslayer",
+        "weaponType":"lance",
+        "rank":1,
+        "uses":16,
+        "weight":13,
+        "might":7,
+        "hit":70,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":1040,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Eirika Great Lord", "Ephraim Great Lord", "Ranger",
+            "Cavalier", "Paladin", "Great Knight", "Troubadour", "Valkyrie",
+            "Mage Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Javelin",
+        "weaponType":"lance",
+        "rank":0,
+        "uses":20,
+        "weight":11,
+        "might":6,
+        "hit":65,
+        "crit":0,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":400,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
         "name":"Iron Axe",
         "weaponType":"axe",
         "rank":0,
@@ -947,7 +1015,8 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":[],
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
 
         "statBoosts":{
             "power":0,
@@ -979,7 +1048,8 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":[],
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
 
         "statBoosts":{
             "power":0,
@@ -1011,7 +1081,8 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":[],
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
 
         "statBoosts":{
             "power":0,
@@ -1043,7 +1114,8 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":[],
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
 
         "statBoosts":{
             "power":0,
@@ -1075,7 +1147,8 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":[],
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
 
         "statBoosts":{
             "power":0,
@@ -1107,7 +1180,8 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":[],
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
 
         "statBoosts":{
             "power":0,
