@@ -269,7 +269,7 @@
         "weaponExp":2,
         "cost":0,
 
-        "usedBy":["Eirika Lord"],
+        "usedBy":["Eirika Lord", "Eirika Great Lord"],
 
         "reaver":false,
         "poison":false,
@@ -333,7 +333,8 @@
         "weaponExp":1,
         "cost":1200,
 
-        "usedBy":["Myrmidon", "Swordmaster", "Assassin", "Eirika Lord"],
+        "usedBy":["Myrmidon", "Swordmaster", "Assassin", "Eirika Lord",
+            "Eirika Great Lord"],
 
         "reaver":false,
         "poison":false,
@@ -868,6 +869,264 @@
     },
 
     {
+        "name":"Spear",
+        "weaponType":"lance",
+        "rank":3,
+        "uses":15,
+        "weight":10,
+        "might":12,
+        "hit":70,
+        "crit":5,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":9000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Axereaver",
+        "weaponType":"lance",
+        "rank":2,
+        "uses":15,
+        "weight":11,
+        "might":10,
+        "hit":70,
+        "crit":5,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":2,
+        "cost":1950,
+
+        "usedBy":[],
+
+        "reaver":true,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Reginleif",
+        "weaponType":"lance",
+        "rank":6,
+        "uses":45,
+        "weight":8,
+        "might":10,
+        "hit":80,
+        "crit":10,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":2,
+        "cost":7200,
+
+        "usedBy":["Ephraim Lord", "Ephraim Great Lord"],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Knight", "General", "Great Knight",
+            "Eirika Great Lord", "Ephraim Great Lord", "Ranger", "Cavalier",
+            "Paladin", "Great Knight", "Troubadour", "Valkyrie", "Mage Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Dragonspear",
+        "weaponType":"lance",
+        "rank":2,
+        "uses":30,
+        "weight":8,
+        "might":10,
+        "hit":70,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":4500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Wyvern Rider", "Wyvern Lord", "Wyvern Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Vidofnir",
+        "weaponType":"lance",
+        "rank":5,
+        "uses":30,
+        "weight":11,
+        "might":10,
+        "hit":85,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":["Monsters"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":5,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Siegmund",
+        "weaponType":"lance",
+        "rank":6,
+        "uses":30,
+        "weight":11,
+        "might":17,
+        "hit":80,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":["Ephraim Lord", "Ephraim Great Lord"],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":["Monsters"],
+
+        "statBoosts":{
+            "power":5,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Heavy Spear",
+        "weaponType":"lance",
+        "rank":1,
+        "uses":16,
+        "weight":14,
+        "might":9,
+        "hit":70,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":1200,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Knight", "General", "Great Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Short Spear",
+        "weaponType":"lance",
+        "rank":2,
+        "uses":18,
+        "weight":12,
+        "might":9,
+        "hit":60,
+        "crit":0,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":900,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
         "name":"Iron Axe",
         "weaponType":"axe",
         "rank":0,
@@ -964,6 +1223,70 @@
     },
 
     {
+        "name":"Poison Axe",
+        "weaponType":"axe",
+        "rank":1,
+        "uses":40,
+        "weight":10,
+        "might":4,
+        "hit":60,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":true,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Brave Axe",
+        "weaponType":"axe",
+        "rank":3,
+        "uses":30,
+        "weight":16,
+        "might":10,
+        "hit":65,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":7500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":true,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
         "name":"Killer Axe",
         "weaponType":"axe",
         "rank":2,
@@ -989,6 +1312,329 @@
             "power":0,
             "skill":0,
             "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Halberd",
+        "weaponType":"axe",
+        "rank":1,
+        "uses":18,
+        "weight":15,
+        "might":10,
+        "hit":60,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":810,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Eirika Great Lord", "Ephraim Great Lord", "Ranger",
+            "Cavalier", "Paladin", "Great Knight", "Troubadour", "Valkyrie",
+            "Mage Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Hammer",
+        "weaponType":"axe",
+        "rank":1,
+        "uses":20,
+        "weight":15,
+        "might":10,
+        "hit":55,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":2,
+        "cost":800,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Knight", "General", "Great Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Hand Axe",
+        "weaponType":"axe",
+        "rank":0,
+        "uses":20,
+        "weight":12,
+        "might":7,
+        "hit":60,
+        "crit":0,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":2,
+        "cost":300,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Tomahawk",
+        "weaponType":"axe",
+        "rank":4,
+        "uses":15,
+        "weight":14,
+        "might":13,
+        "hit":65,
+        "crit":0,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":3000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Swordreaver",
+        "weaponType":"axe",
+        "rank":2,
+        "uses":15,
+        "weight":13,
+        "might":11,
+        "hit":65,
+        "crit":5,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":2,
+        "cost":2100,
+
+        "usedBy":[],
+
+        "reaver":true,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Swordslayer",
+        "weaponType":"axe",
+        "rank":2,
+        "uses":20,
+        "weight":11,
+        "might":13,
+        "hit":80,
+        "crit":5,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":2000,
+
+        "usedBy":[],
+
+        "reaver":true,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Myrmidon", "Swordmaster", "Thief", "Rogue",
+            "Assassin", "Mercenary", "Hero", "Eirika Lord", "Eirika Great Lord"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Hatchet",
+        "weaponType":"axe",
+        "rank":0,
+        "uses":50,
+        "weight":5,
+        "might":4,
+        "hit":85,
+        "crit":0,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Dragon Axe",
+        "weaponType":"axe",
+        "rank":2,
+        "uses":30,
+        "weight":11,
+        "might":12,
+        "hit":60,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":4500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Wyvern Rider", "Wyvern Lord", "Wyvern Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Battle Axe",
+        "weaponType":"axe",
+        "rank":3,
+        "uses":20,
+        "weight":15,
+        "might":13,
+        "hit":60,
+        "crit":5,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":1000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Garm",
+        "weaponType":"axe",
+        "rank":5,
+        "uses":30,
+        "weight":13,
+        "might":20,
+        "hit":75,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":["Monsters"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":5,
             "luck":0,
             "defence":0,
             "resistance":0
@@ -1095,6 +1741,39 @@
     },
 
     {
+        "name":"Poison Bow",
+        "weaponType":"bow",
+        "rank":1,
+        "uses":40,
+        "weight":5,
+        "might":4,
+        "hit":60,
+        "crit":0,
+        "minRange":2,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":true,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
         "name":"Killer Bow",
         "weaponType":"bow",
         "rank":2,
@@ -1113,6 +1792,39 @@
         "reaver":false,
         "poison":false,
         "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Brave Bow",
+        "weaponType":"bow",
+        "rank":3,
+        "uses":30,
+        "weight":12,
+        "might":10,
+        "hit":70,
+        "crit":0,
+        "minRange":2,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":7500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":true,
         "sacred":false,
         "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
             "Wyvern Lord", "Wyvern Knight"],
@@ -1188,6 +1900,39 @@
             "skill":0,
             "speed":0,
             "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Nidhogg",
+        "weaponType":"bow",
+        "rank":5,
+        "uses":30,
+        "weight":7,
+        "might":18,
+        "hit":80,
+        "crit":0,
+        "minRange":2,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":["Pegasus Knight", "Falcon Knight", "Wyvern Rider",
+            "Wyvern Lord", "Wyvern Knight"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":5,
             "defence":0,
             "resistance":0
         }
