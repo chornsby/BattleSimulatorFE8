@@ -1,6 +1,6 @@
-function StatGrowths(hp, power, skill, speed, luck, defence, resistance) {
+function StatGrowths(HP, power, skill, speed, luck, defence, resistance) {
     // Represent the stat growths of a unit as percentages.
-    this.hp = hp;
+    this.HP = HP;
     this.power = power;
     this.skill = skill;
     this.speed = speed;
