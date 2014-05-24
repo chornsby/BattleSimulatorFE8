@@ -1,3 +1,5 @@
+var fliers = ["Pegasus Knight", "Falcon Knight", "Wyvern Rider", "Wyvern Lord", "Wyvern Knight"];
+
 function Unit(characterJSON) {
     
     this.JSON = characterJSON;
@@ -46,6 +48,9 @@ function Unit(characterJSON) {
         var triangleBonus = this.weaponTriangleBonus(that);
         var effectiveness = this.weaponEffectiveness(that);
 
+        console.log(this.name, unitStrength, weaponMight, triangleBonus, effectiveness,
+                unitStrength + (weaponMight + triangleBonus) * effectiveness);
+
         return unitStrength + (weaponMight + triangleBonus) * effectiveness;
     };
 
@@ -74,6 +79,10 @@ function Unit(characterJSON) {
         var terrainDefence = this.terrain.defence;
         var unitDefence = this.defence;
 
+        if (fliers.indexOf(this.job) > -1) {
+            return unitDefence;
+        }
+
         return terrainDefence + unitDefence;
     };
 
@@ -81,6 +90,10 @@ function Unit(characterJSON) {
         // Return the defence power based on stats.
         var terrainDefence = this.terrain.defence;
         var unitResistance = this.resistance;
+
+        if (fliers.indexOf(this.job) > -1) {
+            return unitResistance;
+        }
 
         return terrainDefence + unitResistance;
     };
@@ -119,6 +132,10 @@ function Unit(characterJSON) {
         var attackSpeedTerm = 2 * this.attackSpeed();
         var luckTerm = this.luck;
         var terrainTerm = this.terrain.avoid;
+
+        if (fliers.indexOf(this.job) > -1) {
+            return attackSpeedTerm + luckTerm;
+        }
 
         return attackSpeedTerm + luckTerm + terrainTerm;
     };
