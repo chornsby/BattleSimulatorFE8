@@ -1,5 +1,6 @@
 // TODO: Separate game logic from rendering to page.
-// TODO: Add support for distance separation.
+// TODO: Add support for brave weapons.
+// TODO: Add support for poisoning.
 // TODO: Include effects of Luna and Nosferatu.
 
 var Battle = function(unit1, unit2, separation, logToBattle) {
