@@ -37,7 +37,7 @@ function Weapon(weaponJSON) {
 
         if (this.weaponType === 'sword') {
 
-            if (this.reaver && !that.reaver) {
+            if (this.reaver && !that.reaver || !this.reaver && that.reaver) {
                 if (that.weaponType === 'lance') return 2;
                 else if (that.weaponType === 'axe') return -2;
                 else return 0;
@@ -50,7 +50,7 @@ function Weapon(weaponJSON) {
 
         if (this.weaponType === 'axe') {
 
-            if (this.reaver && !that.reaver) {
+            if (this.reaver && !that.reaver || !this.reaver && that.reaver) {
                 if (that.weaponType === 'sword') return 2;
                 else if (that.weaponType === 'lance') return -2;
                 else return 0;
@@ -63,7 +63,7 @@ function Weapon(weaponJSON) {
 
         if (this.weaponType === 'lance') {
 
-            if (this.reaver && !that.reaver) {
+            if (this.reaver && !that.reaver || !this.reaver && that.reaver) {
                 if (that.weaponType === 'axe') return 2;
                 else if (that.weaponType === 'sword') return -2;
                 else return 0;
