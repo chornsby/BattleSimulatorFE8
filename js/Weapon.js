@@ -27,26 +27,45 @@ function Weapon(weaponJSON) {
         // Return 1 if the attacker has a bonus due to the triangle.
         // Return 0 if there is no bonus.
         // Return -1 if the attacker suffers a penalty due to the triangle.
-        var i = physicalTypes.indexOf(this.weaponType);
-        var j = physicalTypes.indexOf(that.weaponType);
-
-        // Check both are physical types.
-        if (i > -1 && j > -1) {
-            // Check which beats which.
-            if (i == j) return 0;
-            if (i == j - 1 || (i == j + 2)) return -1;
-            return 1;
+        if (this.weaponType === 'sword') {
+            if (that.weaponType === 'axe') return 1;
+            else if (that.weaponType === 'lance') return -1;
+            else return 0;
         }
 
-        var k = magicTypes.indexOf(this.weaponType);
-        var l = magicTypes.indexOf(that.weaponType);
-
-        // Check both are magic types.
-        if (k > -1 && l > -1) {
-            // Check which beats which.
-            if (k == l) return 0;
-            if (k == l - 1 || (k == l + 2)) return -1;
-            return 1;
+        if (this.weaponType === 'axe') {
+            if (that.weaponType === 'lance') return 1;
+            else if (that.weaponType === 'sword') return -1;
+            else return 0;
         }
+
+        if (this.weaponType === 'lance') {
+            if (that.weaponType === 'sword') return 1;
+            else if (that.weaponType === 'axe') return -1;
+            else return 0;
+        }
+
+        if (this.weaponType === 'bow') return 0;
+
+        if (this.weaponType === 'anima') {
+            if (that.weaponType === 'light') return 1;
+            else if (that.weaponType === 'dark') return -1;
+            else return 0;
+        }
+
+        if (this.weaponType === 'light') {
+            if (that.weaponType === 'dark') return 1;
+            else if (that.weaponType === 'anima') return -1;
+            else return 0;
+        }
+
+        if (this.weaponType === 'dark') {
+            if (that.weaponType === 'anima') return 1;
+            else if (that.weaponType === 'light') return -1;
+            else return 0;
+        }
+
+        console.log('Unknown weapon type: ' + this.weaponType);
+        return 0;
     }
 }
