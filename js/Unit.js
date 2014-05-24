@@ -1,4 +1,6 @@
 function Unit(characterJSON) {
+    
+    this.JSON = characterJSON;
 
     this.name = characterJSON.name;
     this.job = characterJSON.job;
@@ -182,26 +184,37 @@ function Unit(characterJSON) {
         // Reset HP to max HP.
         this.HP = this.maxHP;
     };
+    
+    this.levelTo = function(newLevel) {
+        // Update the unit stats to simulate leveling to newLevel.
+
+        // Reset to base stats.
+        this.maxHP = this.JSON.HP;
+        this.power = this.JSON.power;
+        this.skill = this.JSON.skill;
+        this.speed = this.JSON.speed;
+        this.luck = this.JSON.luck;
+        this.defence = this.JSON.defence;
+        this.resistance = this.JSON.resistance;
+
+        // Level up stats.
+        for (var i = this.baseLevel; i < newLevel + 1; i++) {
+            if (percentChance() < this.statGrowths.HP) this.maxHP++;
+            if (percentChance() < this.statGrowths.power) this.power++;
+            if (percentChance() < this.statGrowths.skill) this.skill++;
+            if (percentChance() < this.statGrowths.luck) this.luck++;
+            if (percentChance() < this.statGrowths.defence) this.defence++;
+            if (percentChance() < this.statGrowths.resistance) this.resistance++;
+        }
+
+        // Normalise level and HP.
+        this.HP = this.maxHP;
+        this.level = newLevel;
+    };
 
     this.copy = function() {
-        // Return a copy of the object.
-        var copy = new Unit({
-            "name":this.name,
-            "job":this.job,
-            "baseLevel":this.baseLevel,
-
-            "HP":this.maxHP,
-            "power":this.power,
-            "skill":this.skill,
-            "speed":this.speed,
-            "luck":this.luck,
-            "defence":this.defence,
-            "resistance":this.resistance,
-            "constitution":this.constitution,
-
-            "weaponSkill":this.weaponSkill,
-            "statGrowths":this.statGrowths
-        });
+        // Return a fresh copy of the object.
+        var copy = new Unit(this.JSON);
 
         copy.setTerrain(this.terrain);
         copy.setWeapon(this.weapon);
