@@ -65,13 +65,11 @@ $(document).ready(function() {
         $div.find('.unit-portrait').attr("src", "images/portraits/" + unitA.name + ".gif");
         $div.find('.weapon-type').attr("src", "images/weapon_groups/" + unitA.weapon.weaponType + ".gif");
         $div.find('.weapon-name').attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
-//        $div.eq(4).text(unitA.weapon.name + " " + unitA.weaponTriangleBonus(unitB));
         $div.find('.repeat-attack').text("2x? " + unitA.isRepeatedAttack(unitB));
         $div.find('.hp').text("HP " + unitA.HP + "/" + unitA.maxHP);
         $div.find('.might').text("Mt " + unitA.damage(unitB));
         $div.find('.accuracy').text("Hit " + unitA.accuracy(unitB));
         $div.find('.critical').text("Crit " + unitA.criticalChance(unitB));
-//        $div.eq(10).attr("src", "images/map_sprites/" + unitA.job + ".gif");
     };
 
     var showData = function ($div1, $div2, unit1, unit2) {
@@ -250,30 +248,22 @@ $(document).ready(function() {
     });
 
     $unit1WeaponDropdown.change(function () {
-        resetHealths();
         unit1.setWeapon(Weapons[$unit1WeaponDropdown.val()]);
-        battle = new Battle(unit1, unit2, logToBattle);
         showData($attacker, $defender, unit1, unit2);
     });
 
     $unit1TerrainDropdown.change(function () {
-        resetHealths();
         unit1.setTerrain(Terrains[$unit1TerrainDropdown.val()]);
-        battle = new Battle(unit1, unit2, logToBattle);
         showData($attacker, $defender, unit1, unit2);
     });
 
     $unit2WeaponDropdown.change(function () {
-        resetHealths();
         unit2.setWeapon(Weapons[$unit2WeaponDropdown.val()]);
-        battle = new Battle(unit1, unit2, logToBattle);
         showData($attacker, $defender, unit1, unit2);
     });
 
     $unit2TerrainDropdown.change(function () {
-        resetHealths();
         unit2.setTerrain(Terrains[$unit2TerrainDropdown.val()]);
-        battle = new Battle(unit1, unit2, logToBattle);
         showData($attacker, $defender, unit1, unit2);
     });
 });
