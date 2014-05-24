@@ -419,6 +419,45 @@
     },
 
     {
+        "name":"Joshua",
+
+        "job":"Myrmidon",
+
+        "baseLevel":5,
+
+        "HP":24,
+        "power":8,
+        "skill":13,
+        "speed":14,
+        "luck":7,
+        "defence":5,
+        "resistance":2,
+        "constitution":8,
+
+        "weaponSkill":{
+            "sword":3,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":80,
+            "power":35,
+            "skill":55,
+            "speed":55,
+            "luck":30,
+            "defence":20,
+            "resistance":20
+        }
+
+    },
+
+    {
         "name":"Ephraim",
 
         "job":"Ephraim Lord",
@@ -454,6 +493,629 @@
             "defence":35,
             "resistance":25
         }
+    },
+
+    {
+        "name":"Forde",
+
+        "job":"Cavalier",
+
+        "baseLevel":6,
+
+        "HP":24,
+        "power":7,
+        "skill":8,
+        "speed":8,
+        "luck":7,
+        "defence":8,
+        "resistance":2,
+        "constitution":9,
+
+        "weaponSkill":{
+            "sword":2,
+            "lance":3,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":85,
+            "power":40,
+            "skill":50,
+            "speed":45,
+            "luck":35,
+            "defence":20,
+            "resistance":25
+        }
+
+    },
+
+    {
+        "name":"Kyle",
+
+        "job":"Cavalier",
+
+        "baseLevel":5,
+
+        "HP":25,
+        "power":9,
+        "skill":6,
+        "speed":7,
+        "luck":6,
+        "defence":9,
+        "resistance":1,
+        "constitution":10,
+
+        "weaponSkill":{
+            "sword":2,
+            "lance":3,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":90,
+            "power":50,
+            "skill":40,
+            "speed":40,
+            "luck":20,
+            "defence":25,
+            "resistance":20
+        }
+
+    },
+
+    {
+        "name":"Orson",
+
+        "job":"Paladin",
+
+        "baseLevel":3,
+
+        "HP":34,
+        "power":15,
+        "skill":13,
+        "speed":11,
+        "luck":4,
+        "defence":13,
+        "resistance":7,
+        "constitution":12,
+
+        "weaponSkill":{
+            "sword":5,
+            "lance":5,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":80,
+            "power":55,
+            "skill":45,
+            "speed":40,
+            "luck":25,
+            "defence":45,
+            "resistance":30
+        }
+
+    },
+
+    {
+        "name":"Tana",
+
+        "job":"Pegasus Knight",
+
+        "baseLevel":4,
+
+        "HP":20,
+        "power":8,
+        "skill":8,
+        "speed":12,
+        "luck":8,
+        "defence":7,
+        "resistance":7,
+        "constitution":5,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":2,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":65,
+            "power":45,
+            "skill":40,
+            "speed":65,
+            "luck":60,
+            "defence":20,
+            "resistance":25
+        }
+
+    },
+
+    {
+        "name":"Amelia",
+
+        "job":"Recruit",
+
+        "baseLevel":1,
+
+        "HP":16,
+        "power":4,
+        "skill":3,
+        "speed":4,
+        "luck":6,
+        "defence":2,
+        "resistance":3,
+        "constitution":6,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":1,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":60,
+            "power":35,
+            "skill":40,
+            "speed":40,
+            "luck":50,
+            "defence":30,
+            "resistance":15
+        }
+
+    },
+
+    {
+        "name":"Innes",
+
+        "job":"Sniper",
+
+        "baseLevel":1,
+
+        "HP":31,
+        "power":14,
+        "skill":13,
+        "speed":15,
+        "luck":14,
+        "defence":10,
+        "resistance":9,
+        "constitution":9,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":0,
+            "bow":5,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":75,
+            "power":40,
+            "skill":40,
+            "speed":45,
+            "luck":45,
+            "defence":20,
+            "resistance":25
+        }
+
+    },
+
+    {
+        "name":"Gerik",
+
+        "job":"Mercenary",
+
+        "baseLevel":10,
+
+        "HP":32,
+        "power":14,
+        "skill":13,
+        "speed":13,
+        "luck":8,
+        "defence":10,
+        "resistance":4,
+        "constitution":13,
+
+        "weaponSkill":{
+            "sword":3,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":90,
+            "power":45,
+            "skill":40,
+            "speed":30,
+            "luck":30,
+            "defence":35,
+            "resistance":25
+        }
+
+    },
+
+    {
+        "name":"Marisa",
+
+        "job":"Myrmidon",
+
+        "baseLevel":5,
+
+        "HP":23,
+        "power":7,
+        "skill":12,
+        "speed":13,
+        "luck":9,
+        "defence":4,
+        "resistance":3,
+        "constitution":5,
+
+        "weaponSkill":{
+            "sword":2,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":75,
+            "power":30,
+            "skill":55,
+            "speed":60,
+            "luck":50,
+            "defence":15,
+            "resistance":25
+        }
+
+    },
+
+    {
+        "name":"Dozla",
+
+        "job":"Beserker",
+
+        "baseLevel":1,
+
+        "HP":43,
+        "power":16,
+        "skill":12,
+        "speed":9,
+        "luck":4,
+        "defence":11,
+        "resistance":6,
+        "constitution":16,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":4,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":85,
+            "power":50,
+            "skill":35,
+            "speed":40,
+            "luck":30,
+            "defence":30,
+            "resistance":25
+        }
+
+    },
+
+    {
+        "name":"Saleh",
+
+        "job":"Sage",
+
+        "baseLevel":1,
+
+        "HP":30,
+        "power":16,
+        "skill":18,
+        "speed":14,
+        "luck":11,
+        "defence":8,
+        "resistance":13,
+        "constitution":8,
+
+        "weaponSkill":{
+            "sword":1,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":5,
+            "dark":0,
+            "light":4,
+            "staff":3
+        },
+
+        "statGrowths":{
+            "HP":50,
+            "power":30,
+            "skill":25,
+            "speed":40,
+            "luck":40,
+            "defence":30,
+            "resistance":35
+        }
+
+    },
+
+    {
+        "name":"Ewan",
+
+        "job":"Pupil",
+
+        "baseLevel":1,
+
+        "HP":15,
+        "power":3,
+        "skill":2,
+        "speed":5,
+        "luck":5,
+        "defence":0,
+        "resistance":3,
+        "constitution":5,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":1,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":50,
+            "power":45,
+            "skill":40,
+            "speed":35,
+            "luck":50,
+            "defence":15,
+            "resistance":40
+        }
+
+    },
+
+    {
+        "name":"Cormag",
+
+        "job":"Wyvern Rider",
+
+        "baseLevel":9,
+
+        "HP":30,
+        "power":14,
+        "skill":9,
+        "speed":10,
+        "luck":4,
+        "defence":12,
+        "resistance":2,
+        "constitution":11,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":3,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":85,
+            "power":55,
+            "skill":40,
+            "speed":45,
+            "luck":35,
+            "defence":25,
+            "resistance":15
+        }
+
+    },
+
+    {
+        "name":"Rennac",
+
+        "job":"Rogue",
+
+        "baseLevel":1,
+
+        "HP":28,
+        "power":10,
+        "skill":16,
+        "speed":17,
+        "luck":5,
+        "defence":9,
+        "resistance":11,
+        "constitution":7,
+
+        "weaponSkill":{
+            "sword":4,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":65,
+            "power":25,
+            "skill":45,
+            "speed":60,
+            "luck":25,
+            "defence":25,
+            "resistance":30
+        }
+
+    },
+
+    {
+        "name":"Duessel",
+
+        "job":"Great Knight",
+
+        "baseLevel":10,
+
+        "HP":41,
+        "power":17,
+        "skill":12,
+        "speed":12,
+        "luck":8,
+        "defence":17,
+        "resistance":9,
+        "constitution":15,
+
+        "weaponSkill":{
+            "sword":5,
+            "lance":5,
+            "axe":5,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":85,
+            "power":55,
+            "skill":40,
+            "speed":30,
+            "luck":45,
+            "defence":30,
+            "resistance":20
+        }
+
+    },
+
+    {
+        "name":"Knoll",
+
+        "job":"Shaman",
+
+        "baseLevel":10,
+
+        "HP":22,
+        "power":12,
+        "skill":9,
+        "speed":8,
+        "luck":0,
+        "defence":2,
+        "resistance":10,
+        "constitution":7,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":3,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":70,
+            "power":50,
+            "skill":40,
+            "speed":35,
+            "luck":20,
+            "defence":10,
+            "resistance":45
+        }
+    },
+
+    {
+        "name":"Syrene",
+
+        "job":"Falcon Knight",
+
+        "baseLevel":1,
+
+        "HP":27,
+        "power":12,
+        "skill":13,
+        "speed":15,
+        "luck":12,
+        "defence":10,
+        "resistance":12,
+        "constitution":7,
+
+        "weaponSkill":{
+            "sword":3,
+            "lance":5,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":70,
+            "power":40,
+            "skill":50,
+            "speed":60,
+            "luck":30,
+            "defence":20,
+            "resistance":50
+        }
+
     },
 
     {
