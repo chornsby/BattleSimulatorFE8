@@ -2099,6 +2099,38 @@
     },
 
     {
+        "name":"Excalibur",
+        "weaponType":"anima",
+        "rank":5,
+        "uses":30,
+        "weight":13,
+        "might":18,
+        "hit":90,
+        "crit":10,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":["Monsters"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":5,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
         "name":"Lightning",
         "weaponType":"light",
         "rank":0,
@@ -2259,6 +2291,38 @@
     },
 
     {
+        "name":"Ivaldi",
+        "weaponType":"light",
+        "rank":5,
+        "uses":30,
+        "weight":10,
+        "might":17,
+        "hit":90,
+        "crit":5,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":["Monsters"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":5,
+            "resistance":0
+        }
+    },
+
+    {
         "name":"Flux",
         "weaponType":"dark",
         "rank":1,
@@ -2355,6 +2419,38 @@
     },
 
     {
+        "name":"Eclipse",
+        "weaponType":"dark",
+        "rank":3,
+        "uses":5,
+        "weight":12,
+        "might":0,
+        "hit":30,
+        "crit":0,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":8,
+        "cost":4000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
         "name":"Fenrir",
         "weaponType":"dark",
         "rank":4,
@@ -2367,6 +2463,70 @@
         "maxRange":2,
         "weaponExp":1,
         "cost":9000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Gleipnir",
+        "weaponType":"dark",
+        "rank":5,
+        "uses":30,
+        "weight":20,
+        "might":23,
+        "hit":80,
+        "crit":0,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":3,
+        "cost":900,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":5,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Naglfar",
+        "weaponType":"dark",
+        "rank":5,
+        "uses":999,
+        "weight":18,
+        "might":25,
+        "hit":95,
+        "crit":0,
+        "minRange":1,
+        "maxRange":2,
+        "weaponExp":1,
+        "cost":0,
 
         "usedBy":[],
 
