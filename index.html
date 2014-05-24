@@ -25,39 +25,32 @@ TODO: Add input access to unit stats variables.
 <body>
     <div id="attacker" class="unit-container">
 
-        <h3 class="unit-name">
-            <label for="unit1-unit-dropdown">Attacker:</label>
-            <select id="unit1-unit-dropdown"></select>
-        </h3>
-        <h4>
-            <label for="unit1-level-dropdown">Level:</label>
-            <select id="unit1-level-dropdown"></select>
-        </h4>
-        <div class="unit-portrait-container">
-            <img class="unit-portrait flip-horizontal" src="">
+        <div class="top-containers">
+            <h3 class="unit-name">
+                <label for="unit1-unit-dropdown">Attacker:</label>
+                <select id="unit1-unit-dropdown"></select>
+            </h3>
+            <h4>
+                <label for="unit1-level-dropdown">Level:</label>
+                <select id="unit1-level-dropdown"></select>
+            </h4>
+            <div class="unit-portrait-container">
+                <img class="unit-portrait flip-horizontal" src="">
+            </div>
+
+            <div class="weapon-info">
+                <label for="unit1-weapon-dropdown"></label>
+                <select id="unit1-weapon-dropdown"></select>
+                <img class="weapon-type" src="">
+                <img class="weapon-name" src="">
+            </div>
         </div>
 
-        <div class="weapon-info">
-            <label for="unit1-weapon-dropdown"></label>
-            <select id="unit1-weapon-dropdown"></select>
-            <img class="weapon-type" src="">
-            <img class="weapon-name" src="">
-        </div>
-
-        <p class="repeat-attack"></p>
-
-        <p class="hp"></p>
-        <p class="might"></p>
-        <p class="accuracy"></p>
-        <p class="critical"></p>
-
-        <label for="unit1-terrain-dropdown"></label>
-        <select id="unit1-terrain-dropdown"></select>
-
-        <table>
-            <tbody>
+        <div class="top-containers">
+            <table>
+                <tbody>
                 <tr>
-                    <th><br></th>
+                    <th><br><br><br></th>
                 </tr>
                 <tr>
                     <td>
@@ -99,9 +92,22 @@ TODO: Add input access to unit stats variables.
                         <input class="stat" name="constitution" type="text">
                     </td>
                 </tr>
-            </tbody>
-        </table>
-        
+                </tbody>
+            </table>
+        </div>
+
+        <div class="top-containers battle-details">
+            <p class="repeat-attack"></p>
+
+            <p class="hp"></p>
+            <p class="might"></p>
+            <p class="accuracy"></p>
+            <p class="critical"></p>
+
+            <label for="unit1-terrain-dropdown"></label>
+            <select id="unit1-terrain-dropdown"></select>
+        </div>
+
     </div>
 
     <div class="buttons-container">
@@ -118,89 +124,92 @@ TODO: Add input access to unit stats variables.
     </div>
 
     <div id="defender" class="unit-container">
-        
-        <h3 class="unit-name">
-            <label for="unit2-unit-dropdown">Defender:</label>
-            <select id="unit2-unit-dropdown"></select>
-        </h3>
-        <h4>
-            <label for="unit2-level-dropdown">Level:</label>
-            <select id="unit2-level-dropdown"></select>
-        </h4>
-        <div class="unit-portrait-container">
-            <img class="unit-portrait" src="">
+
+        <div class="top-containers">
+            <table>
+                <tr>
+                    <th><br><br><br></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label>HP</label>
+                        <input class="stat" name="HP" type="text">
+                    </td>
+                    <td>
+                        <label>Luck</label>
+                        <input class="stat" name="luck" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Power</label>
+                        <input class="stat" name="power" type="text">
+                    </td>
+                    <td>
+                        <label>Def</label>
+                        <input class="stat" name="defence" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Skill</label>
+                        <input class="stat" name="skill" type="text">
+                    </td>
+                    <td>
+                        <label>Res</label>
+                        <input class="stat" name="resistance" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Speed</label>
+                        <input class="stat" name="speed" type="text">
+                    </td>
+                    <td>
+                        <label>Con</label>
+                        <input class="stat" name="constitution" type="text">
+                    </td>
+                </tr>
+            </table>
         </div>
 
-        <div class="weapon-info">
-            <label for="unit2-weapon-dropdown"></label>
-            <select id="unit2-weapon-dropdown"></select>
-            <img class="weapon-type" src="">
-            <img class="weapon-name" src="">
+        <div class="top-containers">
+            <h3 class="unit-name">
+                <label for="unit2-unit-dropdown">Defender:</label>
+                <select id="unit2-unit-dropdown"></select>
+            </h3>
+            <h4>
+                <label for="unit2-level-dropdown">Level:</label>
+                <select id="unit2-level-dropdown"></select>
+            </h4>
+            <div class="unit-portrait-container">
+                <img class="unit-portrait" src="">
+            </div>
+
+            <div class="weapon-info">
+                <label for="unit2-weapon-dropdown"></label>
+                <select id="unit2-weapon-dropdown"></select>
+                <img class="weapon-type" src="">
+                <img class="weapon-name" src="">
+            </div>
         </div>
 
-        <p class="repeat-attack"></p>
+        <div class="top-containers battle-details">
+            <p class="repeat-attack"></p>
 
-        <p class="hp"></p>
-        <p class="might"></p>
-        <p class="accuracy"></p>
-        <p class="critical"></p>
+            <p class="hp"></p>
+            <p class="might"></p>
+            <p class="accuracy"></p>
+            <p class="critical"></p>
 
-        <label for="unit2-terrain-dropdown"></label>
-        <select id="unit2-terrain-dropdown"></select>
-
-        <table>
-            <tbody>
-            <tr>
-                <th><br></th>
-            </tr>
-            <tr>
-                <td>
-                    <label>HP</label>
-                    <input class="stat" name="HP" type="text">
-                </td>
-                <td>
-                    <label>Luck</label>
-                    <input class="stat" name="luck" type="text">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Power</label>
-                    <input class="stat" name="power" type="text">
-                </td>
-                <td>
-                    <label>Def</label>
-                    <input class="stat" name="defence" type="text">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Skill</label>
-                    <input class="stat" name="skill" type="text">
-                </td>
-                <td>
-                    <label>Res</label>
-                    <input class="stat" name="resistance" type="text">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Speed</label>
-                    <input class="stat" name="speed" type="text">
-                </td>
-                <td>
-                    <label>Con</label>
-                    <input class="stat" name="constitution" type="text">
-                </td>
-            </tr>
-            </tbody>
-        </table>
-
+            <label for="unit2-terrain-dropdown"></label>
+            <select id="unit2-terrain-dropdown"></select>
+        </div>
     </div>
 
     <div id="battle-log-container">
         <label for="battle-log"></label>
-        <textarea id="battle-log" rows="8" cols="57"></textarea>
+        <textarea id="battle-log" rows="14" cols="57"></textarea>
     </div>
 
 </body>

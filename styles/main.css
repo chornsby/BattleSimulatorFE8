@@ -4,8 +4,8 @@ TODO: Fit layout to align with plan.
 
 .unit-container {
     float: left;
-    height: 600px;
-    width: 200px;
+    height: 500px;
+    width: 400px;
     border-radius: 5px;
 
     text-align: center;
@@ -17,6 +17,18 @@ TODO: Fit layout to align with plan.
 
 #defender {
     background-color: indianred;
+}
+
+.top-containers {
+    float: left;
+
+    height: 250px;
+    width: 200px;
+}
+
+
+#defender > .battle-details {
+    float: right;
 }
 
 .buttons-container {
@@ -67,7 +79,9 @@ td input {
 }
 
 #battle-log-container {
-    clear: both;
+    position: absolute;
+    top: 250px;
+    left: 200px;
 }
 
 .flip-horizontal {
