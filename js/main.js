@@ -69,7 +69,13 @@ $(document).ready(function() {
         $div.find('.unit-portrait').attr("src", "images/portraits/" + unitA.name + ".gif");
         $div.find('.weapon-type').attr("src", "images/weapon_groups/" + unitA.weapon.weaponType + ".gif");
         $div.find('.weapon-name').attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
-        $div.find('.repeat-attack').text("2x? " + unitA.isRepeatedAttack(unitB));
+
+        if (unitA.isRepeatedAttack(unitB)) {
+            $div.find('.repeat-attack').text("2x");
+        } else {
+            $div.find('.repeat-attack').html("<br>");
+        }
+
         $div.find('.hp').text("HP " + unitA.HP + "/" + unitA.maxHP);
         $div.find('.might').text("Mt " + unitA.damage(unitB));
         $div.find('.accuracy').text("Hit " + unitA.accuracy(unitB));
