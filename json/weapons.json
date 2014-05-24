@@ -11,7 +11,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":460
+        "cost":460,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -26,7 +43,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":480
+        "cost":480,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -41,7 +75,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":600
+        "cost":600,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -56,7 +107,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":1500
+        "cost":1500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -71,7 +139,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":2,
-        "cost":980
+        "cost":980,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -86,7 +171,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":2,
-        "cost":980
+        "cost":980,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -101,7 +203,152 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":2,
-        "cost":1800
+        "cost":1800,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Poison Sword",
+        "weaponType":"sword",
+        "rank":1,
+        "uses":40,
+        "weight":6,
+        "might":3,
+        "hit":70,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":true,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Rapier",
+        "weaponType":"sword",
+        "rank":6,
+        "uses":40,
+        "weight":5,
+        "might":7,
+        "hit":95,
+        "crit":10,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":2,
+        "cost":0,
+
+        "usedBy":["Eirika Lord"],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Armoured", "Mounted"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Brave Sword",
+        "weaponType":"sword",
+        "rank":3,
+        "uses":30,
+        "weight":12,
+        "might":9,
+        "hit":75,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":7500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":true,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Shamshir",
+        "weaponType":"sword",
+        "rank":1,
+        "uses":20,
+        "weight":5,
+        "might":8,
+        "hit":75,
+        "crit":35,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":1200,
+
+        "usedBy":["Myrmidon", "Swordmaster", "Assassin", "Eirika Lord"],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -116,7 +363,216 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":1300
+        "cost":1300,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Armorslayer",
+        "weaponType":"sword",
+        "rank":1,
+        "uses":18,
+        "weight":11,
+        "might":8,
+        "hit":80,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":1260,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Armoured"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Wyrmslayer",
+        "weaponType":"sword",
+        "rank":2,
+        "uses":30,
+        "weight":5,
+        "might":8,
+        "hit":75,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":4500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Wyvern"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Lancereaver",
+        "weaponType":"sword",
+        "rank":2,
+        "uses":15,
+        "weight":9,
+        "might":9,
+        "hit":75,
+        "crit":5,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":2,
+        "cost":1800,
+
+        "usedBy":[],
+
+        "reaver":true,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Zanbato",
+        "weaponType":"sword",
+        "rank":1,
+        "uses":18,
+        "weight":11,
+        "might":6,
+        "hit":75,
+        "crit":5,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":1260,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":["Mounted"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Sieglinde",
+        "weaponType":"sword",
+        "rank":6,
+        "uses":30,
+        "weight":9,
+        "might":16,
+        "hit":90,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":["Eirika Lord"],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":["Monsters"],
+
+        "statBoosts":{
+            "power":5,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Audhulma",
+        "weaponType":"sword",
+        "rank":5,
+        "uses":30,
+        "weight":9,
+        "might":18,
+        "hit":85,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":true,
+        "effectiveAgainst":["Monsters"],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":5
+        }
     },
 
     {
@@ -131,7 +587,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":360
+        "cost":360,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -146,7 +619,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":420
+        "cost":420,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -161,7 +651,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":2,
-        "cost":480
+        "cost":480,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -176,7 +683,88 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":1200
+        "cost":1200,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Toxin Lance",
+        "weaponType":"lance",
+        "rank":0,
+        "uses":40,
+        "weight":8,
+        "might":4,
+        "hit":65,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":0,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":true,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Brave Lance",
+        "weaponType":"lance",
+        "rank":3,
+        "uses":30,
+        "weight":14,
+        "might":10,
+        "hit":70,
+        "crit":0,
+        "minRange":1,
+        "maxRange":1,
+        "weaponExp":1,
+        "cost":7500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":true,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -191,7 +779,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":1200
+        "cost":1200,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -206,7 +811,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":270
+        "cost":270,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -221,7 +843,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":2,
-        "cost":360
+        "cost":360,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -236,7 +875,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":1000
+        "cost":1000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -251,7 +907,24 @@
         "minRange":1,
         "maxRange":1,
         "weaponExp":1,
-        "cost":1000
+        "cost":1000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -266,7 +939,24 @@
         "minRange":2,
         "maxRange":2,
         "weaponExp":1,
-        "cost":540
+        "cost":540,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -281,7 +971,24 @@
         "minRange":2,
         "maxRange":2,
         "weaponExp":1,
-        "cost":720
+        "cost":720,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -296,7 +1003,24 @@
         "minRange":2,
         "maxRange":2,
         "weaponExp":1,
-        "cost":1600
+        "cost":1600,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -311,7 +1035,88 @@
         "minRange":2,
         "maxRange":2,
         "weaponExp":1,
-        "cost":1400
+        "cost":1400,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Short Bow",
+        "weaponType":"bow",
+        "rank":1,
+        "uses":22,
+        "weight":3,
+        "might":5,
+        "hit":85,
+        "crit":10,
+        "minRange":2,
+        "maxRange":2,
+        "weaponExp":2,
+        "cost":1760,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Longbow",
+        "weaponType":"bow",
+        "rank":1,
+        "uses":20,
+        "weight":10,
+        "might":5,
+        "hit":65,
+        "crit":0,
+        "minRange":2,
+        "maxRange":3,
+        "weaponExp":1,
+        "cost":2000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -326,7 +1131,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":560
+        "cost":560,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -341,7 +1163,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":700
+        "cost":700,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -356,7 +1195,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":2,
-        "cost":1200
+        "cost":1200,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -371,7 +1227,24 @@
         "minRange":3,
         "maxRange":10,
         "weaponExp":5,
-        "cost":2500
+        "cost":2500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -386,7 +1259,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":6000
+        "cost":6000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -401,7 +1291,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":630
+        "cost":630,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -416,7 +1323,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":2,
-        "cost":900
+        "cost":900,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -431,7 +1355,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":3,
-        "cost":2500
+        "cost":2500,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -446,7 +1387,24 @@
         "minRange":3,
         "maxRange":10,
         "weaponExp":1,
-        "cost":3000
+        "cost":3000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -461,7 +1419,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":8000
+        "cost":8000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -476,7 +1451,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":900
+        "cost":900,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -491,7 +1483,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":4200
+        "cost":4200,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -506,7 +1515,24 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":3200
+        "cost":3200,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     },
 
     {
@@ -521,6 +1547,23 @@
         "minRange":1,
         "maxRange":2,
         "weaponExp":1,
-        "cost":9000
+        "cost":9000,
+
+        "usedBy":[],
+
+        "reaver":false,
+        "poison":false,
+        "brave":false,
+        "sacred":false,
+        "effectiveAgainst":[],
+
+        "statBoosts":{
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
     }
 ]
