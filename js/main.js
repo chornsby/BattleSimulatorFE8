@@ -324,4 +324,42 @@ $(document).ready(function() {
         battle.separation = parseInt($battleSeparationDropdown.val());
         showData($attacker, $defender, unit1, unit2);
     });
+
+    $attacker.find('td input').on('input', function() {
+
+        var valueIn = parseInt(this.value);
+
+        if (valueIn >= 0) {
+
+            // Treat HP specially because must change two values.
+            if (this.name === "HP") {
+                unit1.HP = valueIn;
+                unit1.maxHP = valueIn;
+            } else {
+                unit1[this.name] = valueIn;
+            }
+
+            resetHealths();
+            showData($attacker, $defender, unit1, unit2);
+        }
+    });
+
+    $defender.find('td input').on('input', function() {
+
+        var valueIn = parseInt(this.value);
+
+        if (valueIn >= 0) {
+
+            // Treat HP specially because must change two values.
+            if (this.name === "HP") {
+                unit2.HP = valueIn;
+                unit2.maxHP = valueIn;
+            } else {
+                unit2[this.name] = valueIn;
+            }
+
+            resetHealths();
+            showData($attacker, $defender, unit1, unit2);
+        }
+    });
 });
