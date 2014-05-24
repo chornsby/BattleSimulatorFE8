@@ -2,6 +2,9 @@ function Unit(characterJSON) {
 
     this.name = characterJSON.name;
     this.job = characterJSON.job;
+    this.baseLevel = characterJSON.baseLevel;
+    this.level = characterJSON.baseLevel;
+
     this.HP = characterJSON.HP;
     this.maxHP = characterJSON.HP;
     this.power = characterJSON.power;
@@ -11,7 +14,9 @@ function Unit(characterJSON) {
     this.defence = characterJSON.defence;
     this.resistance = characterJSON.resistance;
     this.constitution = characterJSON.constitution;
+
     this.weaponSkill = characterJSON.weaponSkill;
+    this.statGrowths = characterJSON.statGrowths;
 
     this.weapon = null;
     this.terrain = null;
@@ -183,6 +188,8 @@ function Unit(characterJSON) {
         var copy = new Unit({
             "name":this.name,
             "job":this.job,
+            "baseLevel":this.baseLevel,
+
             "HP":this.maxHP,
             "power":this.power,
             "skill":this.skill,
@@ -191,8 +198,9 @@ function Unit(characterJSON) {
             "defence":this.defence,
             "resistance":this.resistance,
             "constitution":this.constitution,
-            "weaponSkill":this.weaponSkill
 
+            "weaponSkill":this.weaponSkill,
+            "statGrowths":this.statGrowths
         });
 
         copy.setTerrain(this.terrain);
