@@ -198,7 +198,7 @@ function Unit(characterJSON) {
         this.resistance = this.JSON.resistance;
 
         // Level up stats.
-        for (var i = this.baseLevel; i < newLevel + 1; i++) {
+        for (var i = this.baseLevel; i < newLevel; i++) {
             if (percentChance() < this.statGrowths.HP) this.maxHP++;
             if (percentChance() < this.statGrowths.power) this.power++;
             if (percentChance() < this.statGrowths.skill) this.skill++;
@@ -207,9 +207,11 @@ function Unit(characterJSON) {
             if (percentChance() < this.statGrowths.resistance) this.resistance++;
         }
 
+        // TODO: Normalise stats to class maximums.
+
         // Normalise level and HP.
         this.HP = this.maxHP;
-        this.level = newLevel;
+        this.level = newLevel + 1;
     };
 
     this.copy = function() {

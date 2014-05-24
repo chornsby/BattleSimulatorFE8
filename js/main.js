@@ -49,12 +49,16 @@ $(document).ready(function() {
     var $battleLog = $('#battle-log');
 
     var $unit1UnitDropdown = $('#unit1-unit-dropdown');
+    var $unit1LevelDropdown = $('#unit1-level-dropdown');
     var $unit1TerrainDropdown = $('#unit1-terrain-dropdown');
     var $unit1WeaponDropdown = $('#unit1-weapon-dropdown');
 
     var $unit2UnitDropdown = $('#unit2-unit-dropdown');
+    var $unit2LevelDropdown = $('#unit2-level-dropdown');
     var $unit2TerrainDropdown = $('#unit2-terrain-dropdown');
     var $unit2WeaponDropdown = $('#unit2-weapon-dropdown');
+
+    var $battleSeparationDropdown = $('#battle-separation');
 
     var logToBattle = function(text) {
         // Append the given text to the $battleLog textarea.
@@ -93,6 +97,12 @@ $(document).ready(function() {
     var updateTerrainDropdown = function($dropdownSelector) {
         for (var key in Terrains) {
             $dropdownSelector.append(new Option(key, key))
+        }
+    };
+
+    var updateLevelDropdown = function(unit, $dropdownSelector) {
+        for (var i = unit.baseLevel; i < 21; i++) {
+            $dropdownSelector.append(new Option(i, i));
         }
     };
 
@@ -189,9 +199,13 @@ $(document).ready(function() {
 
     var unit1 = Characters["Eirika"].copy();
     var unit2 = Characters["Eirika"].copy();
+    var separation = $battleSeparationDropdown.val();
 
     updateUnitDropdown($unit1UnitDropdown);
     updateUnitDropdown($unit2UnitDropdown);
+
+    updateLevelDropdown(unit1, $unit1LevelDropdown);
+    updateLevelDropdown(unit2, $unit2LevelDropdown);
 
     updateTerrainDropdown($unit1TerrainDropdown);
     updateTerrainDropdown($unit2TerrainDropdown);
@@ -204,7 +218,7 @@ $(document).ready(function() {
     unit1.setTerrain(Terrains[$unit1TerrainDropdown.val()]);
     unit2.setTerrain(Terrains[$unit2TerrainDropdown.val()]);
 
-    var battle = new Battle(unit1, unit2, logToBattle);
+    var battle = new Battle(unit1, unit2, separation, logToBattle);
 
     showData($attacker, $defender, unit1, unit2);
 
@@ -215,35 +229,57 @@ $(document).ready(function() {
 
     $reset.click(function () {
         resetHealths();
-        battle = new Battle(unit1, unit2, logToBattle);
+        battle = new Battle(unit1, unit2, separation, logToBattle);
         showData($attacker, $defender, unit1, unit2);
     });
 
     $unit1UnitDropdown.change(function () {
         resetHealths();
         $unit1WeaponDropdown.empty();
+        $unit1LevelDropdown.empty();
 
         unit1 = Characters[$unit1UnitDropdown.val()].copy();
+
         updateWeaponDropdown(unit1, $unit1WeaponDropdown);
+        updateLevelDropdown(unit1, $unit1LevelDropdown);
 
         unit1.setWeapon(Weapons[$unit1WeaponDropdown.val()]);
         unit1.setTerrain(Terrains[$unit1TerrainDropdown.val()]);
 
-        battle = new Battle(unit1, unit2, logToBattle);
+        battle = new Battle(unit1, unit2, separation, logToBattle);
         showData($attacker, $defender, unit1, unit2);
     });
 
     $unit2UnitDropdown.change(function () {
         resetHealths();
         $unit2WeaponDropdown.empty();
+        $unit2LevelDropdown.empty();
 
         unit2 = Characters[$unit2UnitDropdown.val()].copy();
+
         updateWeaponDropdown(unit2, $unit2WeaponDropdown);
+        updateLevelDropdown(unit2, $unit2LevelDropdown);
 
         unit2.setWeapon(Weapons[$unit2WeaponDropdown.val()]);
         unit2.setTerrain(Terrains[$unit2TerrainDropdown.val()]);
 
-        battle = new Battle(unit1, unit2, logToBattle);
+        battle = new Battle(unit1, unit2, separation, logToBattle);
+        showData($attacker, $defender, unit1, unit2);
+    });
+
+    $unit1LevelDropdown.change(function() {
+        resetHealths();
+
+        unit1.levelTo(parseInt($unit1LevelDropdown.val()));
+
+        showData($attacker, $defender, unit1, unit2);
+    });
+
+    $unit2LevelDropdown.change(function() {
+        resetHealths();
+
+        unit2.levelTo(parseInt($unit2LevelDropdown.val()));
+
         showData($attacker, $defender, unit1, unit2);
     });
 
@@ -264,6 +300,11 @@ $(document).ready(function() {
 
     $unit2TerrainDropdown.change(function () {
         unit2.setTerrain(Terrains[$unit2TerrainDropdown.val()]);
+        showData($attacker, $defender, unit1, unit2);
+    });
+
+    $battleSeparationDropdown.change(function() {
+        battle.separation = parseInt($battleSeparationDropdown.val());
         showData($attacker, $defender, unit1, unit2);
     });
 });
