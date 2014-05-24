@@ -12,6 +12,8 @@ function Weapon(weaponJSON) {
     this.weaponExp = weaponJSON.weaponExp;
     this.cost = weaponJSON.cost;
 
+    this.reaver = weaponJSON.reaver;
+
     var physicalTypes = ["sword", "lance", "axe"];
     var magicTypes = ["anima", "dark", "light"];
 
@@ -27,19 +29,42 @@ function Weapon(weaponJSON) {
         // Return 1 if the attacker has a bonus due to the triangle.
         // Return 0 if there is no bonus.
         // Return -1 if the attacker suffers a penalty due to the triangle.
+        // Return 2 or -2 for reaver bonus vs non-reaver weapon in triangle.
+
         if (this.weaponType === 'sword') {
+
+            if (this.reaver && !that.reaver) {
+                if (that.weaponType === 'lance') return 2;
+                else if (that.weaponType === 'axe') return -2;
+                else return 0;
+            }
+
             if (that.weaponType === 'axe') return 1;
             else if (that.weaponType === 'lance') return -1;
             else return 0;
         }
 
         if (this.weaponType === 'axe') {
+
+            if (this.reaver && !that.reaver) {
+                if (that.weaponType === 'sword') return 2;
+                else if (that.weaponType === 'lance') return -2;
+                else return 0;
+            }
+
             if (that.weaponType === 'lance') return 1;
             else if (that.weaponType === 'sword') return -1;
             else return 0;
         }
 
         if (this.weaponType === 'lance') {
+
+            if (this.reaver && !that.reaver) {
+                if (that.weaponType === 'axe') return 2;
+                else if (that.weaponType === 'sword') return -2;
+                else return 0;
+            }
+
             if (that.weaponType === 'sword') return 1;
             else if (that.weaponType === 'axe') return -1;
             else return 0;
