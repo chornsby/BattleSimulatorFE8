@@ -275,7 +275,7 @@
         "poison":false,
         "brave":false,
         "sacred":false,
-        "effectiveAgainst":["Armoured", "Mounted"],
+        "effectiveAgainst":["Knight", "General", "Great Knight"],
 
         "statBoosts":{
             "power":0,

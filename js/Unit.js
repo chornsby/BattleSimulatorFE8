@@ -32,7 +32,10 @@ function Unit(characterJSON) {
 
     this.weaponEffectiveness = function(that) {
         // Return the effectiveness coefficient for an attacker.
-        /* TODO: Implement this? */
+        if (this.weapon.effectiveAgainst.indexOf(that.job) > -1) {
+            return 3;
+        }
+
         return 1;
     };
 

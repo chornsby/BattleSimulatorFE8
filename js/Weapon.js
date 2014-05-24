@@ -14,6 +14,8 @@ function Weapon(weaponJSON) {
 
     this.reaver = weaponJSON.reaver;
 
+    this.effectiveAgainst = weaponJSON.effectiveAgainst;
+
     var physicalTypes = ["sword", "lance", "axe"];
     var magicTypes = ["anima", "dark", "light"];
 
