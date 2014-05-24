@@ -80,6 +80,17 @@ $(document).ready(function() {
         $div.find('.might').text("Mt " + unitA.damage(unitB));
         $div.find('.accuracy').text("Hit " + unitA.accuracy(unitB));
         $div.find('.critical').text("Crit " + unitA.criticalChance(unitB));
+
+        var table = $div.find('td input');
+        table.eq(0).val(unitA.maxHP);
+        table.eq(1).val(unitA.luck);
+        table.eq(2).val(unitA.power);
+        table.eq(3).val(unitA.defence);
+        table.eq(4).val(unitA.skill);
+        table.eq(5).val(unitA.resistance);
+        table.eq(6).val(unitA.speed);
+        table.eq(7).val(unitA.constitution);
+
     };
 
     var showData = function ($div1, $div2, unit1, unit2) {
