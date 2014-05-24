@@ -65,21 +65,29 @@ $(document).ready(function() {
         $battleLog.val($battleLog.val() + text + "\n");
     };
     
-    var showIndividualData = function(descriptor, $div, unitA, unitB) {
+    var showIndividualData = function(descriptor, $div, unitA, unitB, separation) {
         $div.find('.unit-portrait').attr("src", "images/portraits/" + unitA.name + ".gif");
         $div.find('.weapon-type').attr("src", "images/weapon_groups/" + unitA.weapon.weaponType + ".gif");
         $div.find('.weapon-name').attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
 
-        if (unitA.isRepeatedAttack(unitB)) {
-            $div.find('.repeat-attack').text("2x");
+        if (unitA.inRange(unitB, separation)) {
+            if (unitA.isRepeatedAttack(unitB)) {
+                $div.find('.repeat-attack').text("2X");
+            } else {
+                $div.find('.repeat-attack').html("<br>");
+            }
+
+            $div.find('.hp').text("HP " + unitA.HP + "/" + unitA.maxHP);
+            $div.find('.might').text("Mt " + unitA.damage(unitB));
+            $div.find('.accuracy').text("Hit " + unitA.accuracy(unitB));
+            $div.find('.critical').text("Crit " + unitA.criticalChance(unitB));
         } else {
             $div.find('.repeat-attack').html("<br>");
+            $div.find('.hp').text("HP " + unitA.HP + "/" + unitA.maxHP);
+            $div.find('.might').text("Mt --");
+            $div.find('.accuracy').text("Hit --");
+            $div.find('.critical').text("Crit --");
         }
-
-        $div.find('.hp').text("HP " + unitA.HP + "/" + unitA.maxHP);
-        $div.find('.might').text("Mt " + unitA.damage(unitB));
-        $div.find('.accuracy').text("Hit " + unitA.accuracy(unitB));
-        $div.find('.critical').text("Crit " + unitA.criticalChance(unitB));
 
         var table = $div.find('td input');
         table.eq(0).val(unitA.maxHP);
@@ -93,9 +101,9 @@ $(document).ready(function() {
 
     };
 
-    var showData = function ($div1, $div2, unit1, unit2) {
-        showIndividualData("Attacker", $div1, unit1, unit2);
-        showIndividualData("Defender", $div2, unit2, unit1);
+    var showData = function ($div1, $div2, unit1, unit2, separation) {
+        showIndividualData("Attacker", $div1, unit1, unit2, separation);
+        showIndividualData("Defender", $div2, unit2, unit1, separation);
     };
 
     var resetHealths = function () {
@@ -237,17 +245,17 @@ $(document).ready(function() {
 
     var battle = new Battle(unit1, unit2, separation, logToBattle);
 
-    showData($attacker, $defender, unit1, unit2);
+    showData($attacker, $defender, unit1, unit2, separation);
 
     $fight.click(function () {
         battle.round(unit1, unit2);
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $reset.click(function () {
         resetHealths();
         battle = new Battle(unit1, unit2, separation, logToBattle);
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $unit1UnitDropdown.change(function () {
@@ -264,7 +272,7 @@ $(document).ready(function() {
         unit1.setTerrain(Terrains[$unit1TerrainDropdown.val()]);
 
         battle = new Battle(unit1, unit2, separation, logToBattle);
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $unit2UnitDropdown.change(function () {
@@ -281,7 +289,7 @@ $(document).ready(function() {
         unit2.setTerrain(Terrains[$unit2TerrainDropdown.val()]);
 
         battle = new Battle(unit1, unit2, separation, logToBattle);
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $unit1LevelDropdown.change(function() {
@@ -289,7 +297,7 @@ $(document).ready(function() {
 
         unit1.levelTo(parseInt($unit1LevelDropdown.val()));
 
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $unit2LevelDropdown.change(function() {
@@ -297,32 +305,33 @@ $(document).ready(function() {
 
         unit2.levelTo(parseInt($unit2LevelDropdown.val()));
 
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $unit1WeaponDropdown.change(function () {
         unit1.setWeapon(Weapons[$unit1WeaponDropdown.val()]);
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $unit1TerrainDropdown.change(function () {
         unit1.setTerrain(Terrains[$unit1TerrainDropdown.val()]);
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $unit2WeaponDropdown.change(function () {
         unit2.setWeapon(Weapons[$unit2WeaponDropdown.val()]);
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $unit2TerrainDropdown.change(function () {
         unit2.setTerrain(Terrains[$unit2TerrainDropdown.val()]);
-        showData($attacker, $defender, unit1, unit2);
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $battleSeparationDropdown.change(function() {
-        battle.separation = parseInt($battleSeparationDropdown.val());
-        showData($attacker, $defender, unit1, unit2);
+        separation = parseInt($battleSeparationDropdown.val());
+        battle.separation = separation;
+        showData($attacker, $defender, unit1, unit2, separation);
     });
 
     $attacker.find('td input').on('input', function() {
@@ -340,7 +349,7 @@ $(document).ready(function() {
             }
 
             resetHealths();
-            showData($attacker, $defender, unit1, unit2);
+            showData($attacker, $defender, unit1, unit2, separation);
         }
     });
 
@@ -359,7 +368,7 @@ $(document).ready(function() {
             }
 
             resetHealths();
-            showData($attacker, $defender, unit1, unit2);
+            showData($attacker, $defender, unit1, unit2, separation);
         }
     });
 });

@@ -34,93 +34,136 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
         // Simulate one round of battle.
         if (this.battleOver()) return;
 
-        var attackerHitChance = this.attacker.accuracy(this.defender);
-        var defenderHitChance = this.defender.accuracy(this.attacker);
+        var attackerHitChance;
+        var attackerDamage;
+        var attackerCriticalChance;
 
-        var attackerDamage = this.attacker.damage(this.defender);
-        var defenderDamage = this.defender.damage(this.attacker);
-
-        var attackerCriticalChance = this.attacker.criticalChance(this.defender);
-        var defenderCriticalChance = this.defender.criticalChance(this.attacker);
-
-        // First attacker round.
-        if (percentChance() < attackerHitChance) {
-
-            if (percentChance() < attackerCriticalChance) {
-                this.defender.HP -= attackerDamage * 3;
-                this.defender.normaliseHP();
-                this.logToBattle("Attacker " + this.attacker.name + " scores a critical hit for " + attackerDamage * 3 + " damage!");
-            } else {
-                this.defender.HP -= attackerDamage;
-                this.defender.normaliseHP();
-                this.logToBattle("Attacker " + this.attacker.name + " scores a hit for " + attackerDamage + " damage.");
-            }
-
-        } else {
-            this.logToBattle("Attacker " + this.attacker.name + " misses...");
-        }
-
-        if (this.battleOver()) return;
-
-        // First defender round.
-        if (percentChance() < defenderHitChance) {
-
-            if (percentChance() < defenderCriticalChance) {
-                this.attacker.HP -= defenderDamage * 3;
-                this.attacker.normaliseHP();
-                this.logToBattle("Defender " + this.defender.name + " scores a critical hit for " + defenderDamage * 3 + " damage!");
-            } else {
-                this.attacker.HP -= defenderDamage;
-                this.attacker.normaliseHP();
-                this.logToBattle("Defender " + this.defender.name + " scores a hit for " + defenderDamage + " damage.");
-            }
-
-        } else {
-            this.logToBattle("Defender " + this.defender.name + " misses...");
-        }
-
-        if (this.battleOver()) return;
-
-        // Second attacker round.
-        if (this.attacker.isRepeatedAttack(this.defender)) {
-
+        var defenderHitChance;
+        var defenderDamage;
+        var defenderCriticalChance;
+        
+        var attackerRoundOne = function(attacker, defender) {
+            // First attacker round.
             if (percentChance() < attackerHitChance) {
 
                 if (percentChance() < attackerCriticalChance) {
-                    this.defender.HP -= attackerDamage * 3;
-                    this.defender.normaliseHP();
-                    this.logToBattle("Attacker " + this.attacker.name + " scores a critical hit for " + attackerDamage * 3 + " damage!");
+                    defender.HP -= attackerDamage * 3;
+                    defender.normaliseHP();
+                    logToBattle("Attacker " + attacker.name + " scores a critical hit for " + attackerDamage * 3 + " damage!");
                 } else {
-                    this.defender.HP -= attackerDamage;
-                    this.defender.normaliseHP();
-                    this.logToBattle("Attacker " + this.attacker.name + " scores a hit for " + attackerDamage + " damage.");
+                    defender.HP -= attackerDamage;
+                    defender.normaliseHP();
+                    logToBattle("Attacker " + attacker.name + " scores a hit for " + attackerDamage + " damage.");
                 }
 
             } else {
-                this.logToBattle("Attacker " + this.attacker.name + " misses...");
+                logToBattle("Attacker " + attacker.name + " misses...");
             }
+        };
+        
+        var defenderRoundOne = function(attacker, defender) {
+            // First defender round.
+            if (percentChance() < defenderHitChance) {
+
+                if (percentChance() < defenderCriticalChance) {
+                    attacker.HP -= defenderDamage * 3;
+                    attacker.normaliseHP();
+                    logToBattle("Defender " + defender.name + " scores a critical hit for " + defenderDamage * 3 + " damage!");
+                } else {
+                    attacker.HP -= defenderDamage;
+                    attacker.normaliseHP();
+                    logToBattle("Defender " + defender.name + " scores a hit for " + defenderDamage + " damage.");
+                }
+
+            } else {
+                logToBattle("Defender " + defender.name + " misses...");
+            }
+        };
+        
+        var attackerRoundTwo = function(attacker, defender) {
+            // Second attacker round.
+            if (attacker.isRepeatedAttack(defender)) {
+
+                if (percentChance() < attackerHitChance) {
+
+                    if (percentChance() < attackerCriticalChance) {
+                        defender.HP -= attackerDamage * 3;
+                        defender.normaliseHP();
+                        logToBattle("Attacker " + attacker.name + " scores a critical hit for " + attackerDamage * 3 + " damage!");
+                    } else {
+                        defender.HP -= attackerDamage;
+                        defender.normaliseHP();
+                        logToBattle("Attacker " + attacker.name + " scores a hit for " + attackerDamage + " damage.");
+                    }
+
+                } else {
+                    logToBattle("Attacker " + attacker.name + " misses...");
+                }
+            }
+        };
+        
+        var defenderRoundTwo = function(attacker, defender) {
+            // Second defender round.
+            if (defender.isRepeatedAttack(attacker)) {
+
+                if (percentChance() < defenderHitChance) {
+
+                    if (percentChance() < defenderCriticalChance) {
+                        attacker.HP -= defenderDamage * 3;
+                        attacker.normaliseHP();
+                        logToBattle("Defender " + defender.name + " scores a critical hit for " + defenderDamage * 3 + " damage!");
+                    } else {
+                        attacker.HP -= defenderDamage;
+                        attacker.normaliseHP();
+                        logToBattle("Defender " + defender.name + " scores a hit for " + defenderDamage + " damage.");
+                    }
+
+                } else {
+                    logToBattle("Defender " + defender.name + " misses...");
+                }
+            }
+        };
+        
+        if (this.attacker.inRange(this.defender, this.separation)) {
+            attackerHitChance = this.attacker.accuracy(this.defender);
+            attackerDamage = this.attacker.damage(this.defender);
+            attackerCriticalChance = this.attacker.criticalChance(this.defender);
+        } else {
+            attackerHitChance = null;
+            attackerDamage = null;
+            attackerCriticalChance = null;
+        }
+
+        if (this.defender.inRange(this.attacker, this.separation)) {
+            defenderHitChance = this.defender.accuracy(this.attacker);
+            defenderDamage = this.defender.damage(this.attacker);
+            defenderCriticalChance = this.defender.criticalChance(this.attacker);
+        } else {
+            defenderHitChance = null;
+            defenderDamage = null;
+            defenderCriticalChance = null;
+        }
+
+        if (this.attacker.inRange(this.defender, this.separation)) {
+            attackerRoundOne(this.attacker, this.defender);
         }
 
         if (this.battleOver()) return;
 
-        // Second defender round.
-        if (this.defender.isRepeatedAttack(this.attacker)) {
+        if (this.defender.inRange(this.attacker, this.separation)) {
+            defenderRoundOne(this.attacker, this.defender);
+        }
 
-            if (percentChance() < defenderHitChance) {
+        if (this.battleOver()) return;
 
-                if (percentChance() < defenderCriticalChance) {
-                    this.attacker.HP -= defenderDamage * 3;
-                    this.attacker.normaliseHP();
-                    this.logToBattle("Defender " + this.defender.name + " scores a critical hit for " + defenderDamage * 3 + " damage!");
-                } else {
-                    this.attacker.HP -= defenderDamage;
-                    this.attacker.normaliseHP();
-                    this.logToBattle("Defender " + this.defender.name + " scores a hit for " + defenderDamage + " damage.");
-                }
+        if (this.attacker.inRange(this.defender, this.separation)) {
+            attackerRoundTwo(this.attacker, this.defender);
+        }
 
-            } else {
-                this.logToBattle("Defender " + this.defender.name + " misses...");
-            }
+        if (this.battleOver()) return;
+
+        if (this.defender.inRange(this.attacker, this.separation)) {
+            defenderRoundTwo(this.attacker, this.defender);
         }
 
         if (this.battleOver()) return;

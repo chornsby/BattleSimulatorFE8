@@ -9,6 +9,8 @@ function Weapon(weaponJSON) {
     this.might = weaponJSON.might;
     this.hit = weaponJSON.hit;
     this.crit = weaponJSON.crit;
+    this.minRange = weaponJSON.minRange;
+    this.maxRange = weaponJSON.maxRange;
     this.weaponExp = weaponJSON.weaponExp;
     this.cost = weaponJSON.cost;
 

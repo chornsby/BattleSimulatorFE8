@@ -25,6 +25,11 @@ function Unit(characterJSON) {
     this.weapon = null;
     this.terrain = null;
 
+    this.inRange = function(unit, separation) {
+        // Return true if this is in range to attack the given unit.
+        return separation >= this.weapon.minRange && separation <= this.weapon.maxRange;
+    };
+
     this.weaponTriangleBonus = function(that) {
         // Return 1 if the attacker has a bonus due to the triangle.
         // Return 0 if there is no bonus.
@@ -47,9 +52,6 @@ function Unit(characterJSON) {
         var weaponMight = this.weapon.might;
         var triangleBonus = this.weaponTriangleBonus(that);
         var effectiveness = this.weaponEffectiveness(that);
-
-        console.log(this.name, unitStrength, weaponMight, triangleBonus, effectiveness,
-                unitStrength + (weaponMight + triangleBonus) * effectiveness);
 
         return unitStrength + (weaponMight + triangleBonus) * effectiveness;
     };
