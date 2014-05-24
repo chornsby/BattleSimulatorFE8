@@ -52,8 +52,9 @@ function Unit(characterJSON) {
         var constitution = this.constitution;
 
         if (weaponWeight > constitution) {
-            return this.speed - (weaponWeight - constitution);
+            return capAboveZero(this.speed - (weaponWeight - constitution));
         }
+
         return this.speed;
     };
 
@@ -134,7 +135,7 @@ function Unit(characterJSON) {
         var skillTerm = Math.floor(0.5 * this.skill);
         var classCritical = 0;
 
-        if (this.job.lethal || this.job.lethal) {
+        if (this.job.lethal) {
             classCritical = 15;
         }
 
