@@ -71,7 +71,9 @@ $(document).ready(function() {
         $div.find('.weapon-name').attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
 
         if (unitA.inRange(unitB, separation)) {
-            if (unitA.isRepeatedAttack(unitB)) {
+            if (unitA.isRepeatedAttack(unitB) && unitA.weapon.brave) {
+                $div.find('.repeat-attack').text("4X");
+            } else if (unitA.isRepeatedAttack(unitB) || unitA.weapon.brave){
                 $div.find('.repeat-attack').text("2X");
             } else {
                 $div.find('.repeat-attack').html("<br>");
@@ -349,6 +351,7 @@ $(document).ready(function() {
             }
 
             resetHealths();
+            battle = new Battle(unit1, unit2, separation, logToBattle);
             showData($attacker, $defender, unit1, unit2, separation);
         }
     });
@@ -368,6 +371,7 @@ $(document).ready(function() {
             }
 
             resetHealths();
+            battle = new Battle(unit1, unit2, separation, logToBattle);
             showData($attacker, $defender, unit1, unit2, separation);
         }
     });
