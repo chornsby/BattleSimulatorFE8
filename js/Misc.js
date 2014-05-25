@@ -17,6 +17,10 @@ Array.prototype.shuffle = function() {
     }
 };
 
+String.prototype.capitalise = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
 var capToPercent = function(n) {
     // Return a value capped between 0 and 100 inclusive.
     if (n > 100) {

@@ -67,7 +67,7 @@ $(document).ready(function() {
     
     var showIndividualData = function(descriptor, $div, unitA, unitB, separation) {
         $div.find('.unit-portrait').attr("src", "images/portraits/" + unitA.name + ".gif");
-        $div.find('.weapon-type').attr("src", "images/weapon_groups/" + unitA.weapon.weaponType + ".gif");
+        $div.find('.weapon-type').attr("src", "images/weapon_groups/" + unitA.weapon.weaponType.capitalise() + ".gif");
         $div.find('.weapon-name').attr("src", "images/weapons/" + unitA.weapon.name + ".gif");
 
         if (unitA.inRange(unitB, separation)) {
