@@ -15,6 +15,7 @@ function Weapon(weaponJSON) {
     this.cost = weaponJSON.cost;
 
     this.reaver = weaponJSON.reaver;
+    this.brave = weaponJSON.brave;
 
     this.effectiveAgainst = weaponJSON.effectiveAgainst;
 

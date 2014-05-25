@@ -147,24 +147,48 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
 
         if (this.attacker.inRange(this.defender, this.separation)) {
             attackerRoundOne(this.attacker, this.defender);
+
+            if (this.battleOver()) return;
+
+            if (this.attacker.weapon.brave) {
+                attackerRoundOne(this.attacker, this.defender);
+            }
         }
 
         if (this.battleOver()) return;
 
         if (this.defender.inRange(this.attacker, this.separation)) {
             defenderRoundOne(this.attacker, this.defender);
+
+            if (this.battleOver()) return;
+
+            if(this.defender.weapon.brave) {
+                defenderRoundOne(this.attacker, this.defender);
+            }
         }
 
         if (this.battleOver()) return;
 
         if (this.attacker.inRange(this.defender, this.separation)) {
             attackerRoundTwo(this.attacker, this.defender);
+
+            if (this.battleOver()) return;
+
+            if (this.attacker.weapon.brave) {
+                attackerRoundTwo(this.attacker, this.defender);
+            }
         }
 
         if (this.battleOver()) return;
 
         if (this.defender.inRange(this.attacker, this.separation)) {
             defenderRoundTwo(this.attacker, this.defender);
+
+            if (this.battleOver()) return;
+
+            if (this.defender.weapon.brave) {
+                defenderRoundTwo(this.attacker, this.defender);
+            }
         }
 
         if (this.battleOver()) return;
