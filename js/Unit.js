@@ -209,7 +209,7 @@ function Unit(characterJSON) {
     };
     
     this.levelTo = function(newLevel) {
-        // Update the unit stats to simulate leveling to newLevel.
+        // Update the unit stats to average values for newLevel.
 
         // Reset to base stats.
         this.maxHP = this.JSON.HP;
@@ -221,20 +221,19 @@ function Unit(characterJSON) {
         this.resistance = this.JSON.resistance;
 
         // Level up stats.
-        for (var i = this.baseLevel; i < newLevel; i++) {
-            if (percentChance() < this.statGrowths.HP) this.maxHP++;
-            if (percentChance() < this.statGrowths.power) this.power++;
-            if (percentChance() < this.statGrowths.skill) this.skill++;
-            if (percentChance() < this.statGrowths.luck) this.luck++;
-            if (percentChance() < this.statGrowths.defence) this.defence++;
-            if (percentChance() < this.statGrowths.resistance) this.resistance++;
-        }
+        this.maxHP += Math.round((newLevel - 1) * this.statGrowths.HP / 100);
+        this.power += Math.round((newLevel - 1) * this.statGrowths.power / 100);
+        this.skill += Math.round((newLevel - 1) * this.statGrowths.skill / 100);
+        this.speed += Math.round((newLevel - 1) * this.statGrowths.speed / 100);
+        this.luck += Math.round((newLevel - 1) * this.statGrowths.luck / 100);
+        this.defence += Math.round((newLevel - 1) * this.statGrowths.defence / 100);
+        this.resistance += Math.round((newLevel - 1) * this.statGrowths.resistance / 100);
 
         // TODO: Normalise stats to class maximums.
 
         // Normalise level and HP.
         this.HP = this.maxHP;
-        this.level = newLevel + 1;
+        this.level = newLevel;
     };
 
     this.copy = function() {
