@@ -46,6 +46,7 @@ button {
 
 table {
     margin: auto;
+    text-align: right;
 }
 
 td input {
