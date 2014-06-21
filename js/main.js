@@ -48,15 +48,17 @@ $(document).ready(function() {
 
     var $battleLog = $('#battle-log');
 
-    var $unit1UnitDropdown = $('#unit1-unit-dropdown');
-    var $unit1LevelDropdown = $('#unit1-level-dropdown');
-    var $unit1TerrainDropdown = $('#unit1-terrain-dropdown');
-    var $unit1WeaponDropdown = $('#unit1-weapon-dropdown');
+    var $unit1UnitDropdown = $attacker.find('.unit-dropdown');
+    var $unit1LevelDropdown = $attacker.find('.level-dropdown');
+    var $unit1JobDropdown = $attacker.find('.job-dropdown');
+    var $unit1TerrainDropdown = $attacker.find('.terrain-dropdown');
+    var $unit1WeaponDropdown = $attacker.find('.weapon-dropdown');
 
-    var $unit2UnitDropdown = $('#unit2-unit-dropdown');
-    var $unit2LevelDropdown = $('#unit2-level-dropdown');
-    var $unit2TerrainDropdown = $('#unit2-terrain-dropdown');
-    var $unit2WeaponDropdown = $('#unit2-weapon-dropdown');
+    var $unit2UnitDropdown = $defender.find('.unit-dropdown');
+    var $unit2LevelDropdown = $defender.find('.level-dropdown');
+    var $unit2JobDropdown = $defender.find('.job-dropdown');
+    var $unit2TerrainDropdown = $defender.find('.terrain-dropdown');
+    var $unit2WeaponDropdown = $defender.find('.weapon-dropdown');
 
     var $battleSeparationDropdown = $('#battle-separation');
 
@@ -91,15 +93,25 @@ $(document).ready(function() {
             $div.find('.critical').text("Crit --");
         }
 
-        var table = $div.find('td input');
-        table.eq(0).val(unitA.maxHP);
-        table.eq(1).val(unitA.luck);
-        table.eq(2).val(unitA.power);
-        table.eq(3).val(unitA.defence);
-        table.eq(4).val(unitA.skill);
-        table.eq(5).val(unitA.resistance);
-        table.eq(6).val(unitA.speed);
-        table.eq(7).val(unitA.constitution);
+        var statsTable = $div.find('td input');
+        statsTable.eq(0).val(unitA.maxHP);
+        statsTable.eq(1).val(unitA.luck);
+        statsTable.eq(2).val(unitA.power);
+        statsTable.eq(3).val(unitA.defence);
+        statsTable.eq(4).val(unitA.skill);
+        statsTable.eq(5).val(unitA.resistance);
+        statsTable.eq(6).val(unitA.speed);
+        statsTable.eq(7).val(unitA.constitution);
+
+        var skillTable = $div.find('td select');
+        skillTable.eq(0).find("option").eq(unitA.weaponSkill.sword).prop("selected", true);
+        skillTable.eq(1).find("option").eq(unitA.weaponSkill.axe).prop("selected", true);
+        skillTable.eq(2).find("option").eq(unitA.weaponSkill.lance).prop("selected", true);
+        skillTable.eq(3).find("option").eq(unitA.weaponSkill.bow).prop("selected", true);
+        skillTable.eq(4).find("option").eq(unitA.weaponSkill.anima).prop("selected", true);
+        skillTable.eq(5).find("option").eq(unitA.weaponSkill.dark).prop("selected", true);
+        skillTable.eq(6).find("option").eq(unitA.weaponSkill.light).prop("selected", true);
+        skillTable.eq(7).find("option").eq(unitA.weaponSkill.staff).prop("selected", true);
 
     };
 
@@ -128,13 +140,21 @@ $(document).ready(function() {
     };
 
     var updateLevelDropdown = function(unit, $dropdownSelector) {
+        $dropdownSelector.empty();
         for (var i = unit.baseLevel; i < 21; i++) {
             $dropdownSelector.append(new Option(i, i));
         }
     };
 
+    var updateJobDropdown = function(unit, $dropdownSelector) {
+        $dropdownSelector.empty();
+        $dropdownSelector.append(new Option(unit.job, unit.job));
+    };
+
     var updateWeaponDropdown = function (unit, $dropdownSelector) {
-        // Update the dropdown options as a side effect.
+
+        $dropdownSelector.empty();
+
         var weapon;
         var optgroup;
 
@@ -142,7 +162,7 @@ $(document).ready(function() {
             optgroup = $('<optgroup label="Swords">');
 
             for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "sword") {
+                if (Weapons[weapon].weaponType === "sword" && unit.weaponSkill.sword > Weapons[weapon].rank) {
                     optgroup.append(new Option(weapon, weapon));
                 }
             }
@@ -154,7 +174,7 @@ $(document).ready(function() {
             optgroup = $('<optgroup label="Axes">');
 
             for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "axe") {
+                if (Weapons[weapon].weaponType === "axe" && unit.weaponSkill.axe > Weapons[weapon].rank) {
                     optgroup.append(new Option(weapon, weapon));
                 }
             }
@@ -166,7 +186,7 @@ $(document).ready(function() {
             optgroup = $('<optgroup label="Lances">');
 
             for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "lance") {
+                if (Weapons[weapon].weaponType === "lance" && unit.weaponSkill.lance > Weapons[weapon].rank) {
                     optgroup.append(new Option(weapon, weapon));
                 }
             }
@@ -178,7 +198,7 @@ $(document).ready(function() {
             optgroup = $('<optgroup label="Bows">');
 
             for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "bow") {
+                if (Weapons[weapon].weaponType === "bow" && unit.weaponSkill.bow > Weapons[weapon].rank) {
                     optgroup.append(new Option(weapon, weapon));
                 }
             }
@@ -190,7 +210,7 @@ $(document).ready(function() {
             optgroup = $('<optgroup label="Anima Magic">');
 
             for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "anima") {
+                if (Weapons[weapon].weaponType === "anima" && unit.weaponSkill.anima > Weapons[weapon].rank) {
                     optgroup.append(new Option(weapon, weapon));
                 }
             }
@@ -202,7 +222,7 @@ $(document).ready(function() {
             optgroup = $('<optgroup label="Dark Magic">');
 
             for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "dark") {
+                if (Weapons[weapon].weaponType === "dark" && unit.weaponSkill.dark > Weapons[weapon].rank) {
                     optgroup.append(new Option(weapon, weapon));
                 }
             }
@@ -214,7 +234,7 @@ $(document).ready(function() {
             optgroup = $('<optgroup label="Light Magic">');
 
             for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "light") {
+                if (Weapons[weapon].weaponType === "light" && unit.weaponSkill.light > Weapons[weapon].rank) {
                     optgroup.append(new Option(weapon, weapon));
                 }
             }
@@ -222,6 +242,7 @@ $(document).ready(function() {
             $dropdownSelector.append(optgroup);
         }
 
+        unit.setWeapon(Weapons[$dropdownSelector.val()]);
     };
 
     var unit1 = Characters["Eirika"].copy();
@@ -234,14 +255,15 @@ $(document).ready(function() {
     updateLevelDropdown(unit1, $unit1LevelDropdown);
     updateLevelDropdown(unit2, $unit2LevelDropdown);
 
+    updateJobDropdown(unit1, $unit1JobDropdown);
+    updateJobDropdown(unit2, $unit2JobDropdown);
+
     updateTerrainDropdown($unit1TerrainDropdown);
     updateTerrainDropdown($unit2TerrainDropdown);
 
     updateWeaponDropdown(unit1, $unit1WeaponDropdown);
     updateWeaponDropdown(unit2, $unit2WeaponDropdown);
 
-    unit1.setWeapon(Weapons[$unit1WeaponDropdown.val()]);
-    unit2.setWeapon(Weapons[$unit2WeaponDropdown.val()]);
     unit1.setTerrain(Terrains[$unit1TerrainDropdown.val()]);
     unit2.setTerrain(Terrains[$unit2TerrainDropdown.val()]);
 
@@ -262,13 +284,12 @@ $(document).ready(function() {
 
     $unit1UnitDropdown.change(function () {
         resetHealths();
-        $unit1WeaponDropdown.empty();
-        $unit1LevelDropdown.empty();
 
         unit1 = Characters[$unit1UnitDropdown.val()].copy();
 
         updateWeaponDropdown(unit1, $unit1WeaponDropdown);
         updateLevelDropdown(unit1, $unit1LevelDropdown);
+        updateJobDropdown(unit1, $unit1JobDropdown);
 
         unit1.setWeapon(Weapons[$unit1WeaponDropdown.val()]);
         unit1.setTerrain(Terrains[$unit1TerrainDropdown.val()]);
@@ -279,13 +300,12 @@ $(document).ready(function() {
 
     $unit2UnitDropdown.change(function () {
         resetHealths();
-        $unit2WeaponDropdown.empty();
-        $unit2LevelDropdown.empty();
 
         unit2 = Characters[$unit2UnitDropdown.val()].copy();
 
         updateWeaponDropdown(unit2, $unit2WeaponDropdown);
         updateLevelDropdown(unit2, $unit2LevelDropdown);
+        updateJobDropdown(unit2, $unit2JobDropdown);
 
         unit2.setWeapon(Weapons[$unit2WeaponDropdown.val()]);
         unit2.setTerrain(Terrains[$unit2TerrainDropdown.val()]);
@@ -375,4 +395,21 @@ $(document).ready(function() {
             showData($attacker, $defender, unit1, unit2, separation);
         }
     });
+
+    $attacker.find('td select').change(function() {
+
+        unit1.weaponSkill[this.className] = parseInt(this.value);
+
+        updateWeaponDropdown(unit1, $unit1WeaponDropdown);
+        showData($attacker, $defender, unit1, unit2, separation);
+    });
+
+    $defender.find('td select').change(function() {
+
+        unit2.weaponSkill[this.className] = parseInt(this.value);
+
+        updateWeaponDropdown(unit2, $unit2WeaponDropdown);
+        showData($attacker, $defender, unit1, unit2, separation);
+    });
+
 });

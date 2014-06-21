@@ -19,6 +19,7 @@ function Unit(characterJSON) {
     this.resistance = characterJSON.resistance;
     this.constitution = characterJSON.constitution;
 
+    // TODO: Copy objects that are not being deeply copied -- reference is copied.
     this.weaponSkill = characterJSON.weaponSkill;
     this.statGrowths = characterJSON.statGrowths;
 

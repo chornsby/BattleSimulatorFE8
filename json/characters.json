@@ -1,41 +1,54 @@
 [
     {
-        "name":"Eirika",
+        "name": "Eirika",
 
-        "job":"Eirika Lord",
+        "job": "Eirika Lord",
 
-        "baseLevel":1,
+        "baseLevel": 1,
 
-        "HP":16,
-        "power":4,
-        "skill":8,
-        "speed":9,
-        "luck":5,
-        "defence":3,
-        "resistance":1,
-        "constitution":5,
+        "HP": 16,
+        "power": 4,
+        "skill": 8,
+        "speed": 9,
+        "luck": 5,
+        "defence": 3,
+        "resistance": 1,
+        "constitution": 5,
 
-        "weaponSkill":{
-            "sword":1,
-            "lance":0,
-            "axe":0,
-            "bow":0,
-            "anima":0,
-            "dark":0,
-            "light":0,
-            "staff":0
+        "weaponSkill": {
+            "sword": 1,
+            "lance": 0,
+            "axe": 0,
+            "bow": 0,
+            "anima": 0,
+            "dark": 0,
+            "light": 0,
+            "staff": 0
         },
 
-        "statGrowths":{
-            "HP":70,
-            "power":40,
-            "skill":60,
-            "speed":60,
-            "luck":60,
-            "defence":30,
-            "resistance":30
-        }
+        "statGrowths": {
+            "HP": 70,
+            "power": 40,
+            "skill": 60,
+            "speed": 60,
+            "luck": 60,
+            "defence": 30,
+            "resistance": 30
+        },
 
+        "promotions": {
+            "Eirika Great Lord": {
+                "HP": 4,
+                "power": 2,
+                "skill": 2,
+                "speed": 1,
+                "luck": 0,
+                "defence": 3,
+                "resistance": 5,
+                "constitution": 2,
+                "move": 2
+            }
+        }
     },
 
     {
@@ -111,6 +124,33 @@
             "luck":40,
             "defence":25,
             "resistance":20
+        },
+
+        "promotions": {
+
+            "Paladin": {
+                "HP": 2,
+                "power": 1,
+                "skill": 1,
+                "speed": 1,
+                "luck": 0,
+                "defence": 2,
+                "resistance": 1,
+                "constitution": 2,
+                "move": 1
+            },
+
+            "Great Knight": {
+                "HP": 3,
+                "power": 2,
+                "skill": 1,
+                "speed": 2,
+                "luck": 0,
+                "defence": 2,
+                "resistance": 1,
+                "constitution": 4,
+                "move": -1
+            }
         }
     },
 
@@ -863,7 +903,7 @@
         "constitution":8,
 
         "weaponSkill":{
-            "sword":1,
+            "sword":0,
             "lance":0,
             "axe":0,
             "bow":0,
