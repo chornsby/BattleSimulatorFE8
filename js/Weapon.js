@@ -21,6 +21,8 @@ function Weapon(weaponJSON) {
 
     this.effectiveAgainst = weaponJSON.effectiveAgainst;
 
+    this.statBoosts = weaponJSON.statBoosts;
+
     var physicalTypes = ["sword", "lance", "axe", "bow"];
     var magicTypes = ["anima", "dark", "light"];
 

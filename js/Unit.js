@@ -190,7 +190,21 @@ function Unit(characterJSON) {
 
     this.setWeapon = function(newWeapon) {
         // Set the weapon for the unit.
+
+        // First remove old stat boosts (if applicable).
+        if (this.weapon != null) {
+            for (var key in this.weapon.statBoosts) {
+                this[key] -= this.weapon.statBoosts[key];
+            }
+        }
+
+        // Then set the new weapon.
         this.weapon = newWeapon;
+
+        // Finally, add new stat boosts (if applicable).
+        for (var key in newWeapon.statBoosts) {
+            this[key] += newWeapon.statBoosts[key];
+        }
     };
 
     this.normaliseHP = function() {
@@ -241,7 +255,6 @@ function Unit(characterJSON) {
         var copy = new Unit(this.JSON);
 
         copy.setTerrain(this.terrain);
-        copy.setWeapon(this.weapon);
 
         return copy;
     };
