@@ -155,91 +155,46 @@ $(document).ready(function() {
 
         $dropdownSelector.empty();
 
+        var weaponName;
         var weapon;
-        var optgroup;
 
-        if (unit.weaponSkill.sword > 0) {
-            optgroup = $('<optgroup label="Swords">');
+        var optgroups = {
+            "sword": $('<optgroup label="Swords">'),
+            "lance": $('<optgroup label="Lances">'),
+            "axe": $('<optgroup label="Axes">'),
+            "bow": $('<optgroup label="Bows">'),
+            "anima": $('<optgroup label="Anima Magic">'),
+            "light": $('<optgroup label="Light Magic">'),
+            "dark": $('<optgroup label="Dark Magic">')
+        };
 
-            for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "sword" && unit.weaponSkill.sword > Weapons[weapon].rank) {
-                    optgroup.append(new Option(weapon, weapon));
+        for (weaponName in Weapons) {
+            weapon = Weapons[weaponName];
+
+            var canWield = unit.weaponSkill[weapon.weaponType] > weapon.rank;
+
+            if (weapon.usedBy.length > 0) {
+                // Treat special weapons here (rapier, shamshir, etc).
+                var usedByThem = weapon.usedBy.indexOf(unit.job) > -1;
+
+                if (usedByThem && canWield) {
+                    optgroups[weapon.weaponType].append(new Option(
+                        weaponName, weaponName));
+                }
+            } else {
+                // Treat standard weapons here
+                if (canWield) {
+                    optgroups[weapon.weaponType].append(new Option(
+                        weaponName, weaponName));
                 }
             }
-
-            $dropdownSelector.append(optgroup);
         }
 
-        if (unit.weaponSkill.axe > 0) {
-            optgroup = $('<optgroup label="Axes">');
-
-            for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "axe" && unit.weaponSkill.axe > Weapons[weapon].rank) {
-                    optgroup.append(new Option(weapon, weapon));
-                }
+        // Add the option groups to the dropdown if they contain anything.
+        for (var key in optgroups) {
+            if (unit.weaponSkill[key] > 0) {
+                $dropdownSelector.append(optgroups[key]);
             }
-
-            $dropdownSelector.append(optgroup);
-        }
-
-        if (unit.weaponSkill.lance > 0) {
-            optgroup = $('<optgroup label="Lances">');
-
-            for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "lance" && unit.weaponSkill.lance > Weapons[weapon].rank) {
-                    optgroup.append(new Option(weapon, weapon));
-                }
-            }
-
-            $dropdownSelector.append(optgroup);
-        }
-
-        if (unit.weaponSkill.bow > 0) {
-            optgroup = $('<optgroup label="Bows">');
-
-            for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "bow" && unit.weaponSkill.bow > Weapons[weapon].rank) {
-                    optgroup.append(new Option(weapon, weapon));
-                }
-            }
-
-            $dropdownSelector.append(optgroup);
-        }
-
-        if (unit.weaponSkill.anima > 0) {
-            optgroup = $('<optgroup label="Anima Magic">');
-
-            for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "anima" && unit.weaponSkill.anima > Weapons[weapon].rank) {
-                    optgroup.append(new Option(weapon, weapon));
-                }
-            }
-
-            $dropdownSelector.append(optgroup);
-        }
-
-        if (unit.weaponSkill.dark > 0) {
-            optgroup = $('<optgroup label="Dark Magic">');
-
-            for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "dark" && unit.weaponSkill.dark > Weapons[weapon].rank) {
-                    optgroup.append(new Option(weapon, weapon));
-                }
-            }
-
-            $dropdownSelector.append(optgroup);
-        }
-
-        if (unit.weaponSkill.light > 0) {
-            optgroup = $('<optgroup label="Light Magic">');
-
-            for (weapon in Weapons) {
-                if (Weapons[weapon].weaponType === "light" && unit.weaponSkill.light > Weapons[weapon].rank) {
-                    optgroup.append(new Option(weapon, weapon));
-                }
-            }
-
-            $dropdownSelector.append(optgroup);
         }
 
         unit.setWeapon(Weapons[$dropdownSelector.val()]);
