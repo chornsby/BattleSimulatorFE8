@@ -14,10 +14,14 @@ function Weapon(weaponJSON) {
     this.weaponExp = weaponJSON.weaponExp;
     this.cost = weaponJSON.cost;
 
+    this.usedBy = weaponJSON.usedBy;
+
     this.reaver = weaponJSON.reaver;
     this.brave = weaponJSON.brave;
 
     this.effectiveAgainst = weaponJSON.effectiveAgainst;
+
+    this.statBoosts = weaponJSON.statBoosts;
 
     var physicalTypes = ["sword", "lance", "axe", "bow"];
     var magicTypes = ["anima", "dark", "light"];

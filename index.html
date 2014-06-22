@@ -17,40 +17,54 @@ TODO: Add title and helpful documentation.
     <script type="text/javascript" src="js/Terrain.js"></script>
     <script type="text/javascript" src="js/Weapon.js"></script>
     <script type="text/javascript" src="js/WeaponSkill.js"></script>
+    <script type="text/javascript" src="js/StatGrowths.js"></script>
     <script type="text/javascript" src="js/Job.js"></script>
     <script type="text/javascript" src="js/Unit.js"></script>
     <script type="text/javascript" src="js/Battle.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+
     <div id="attacker" class="unit-container">
 
         <div class="top-containers">
+
             <h3 class="unit-name">
-                <label for="unit1-unit-dropdown">Attacker:</label>
-                <select id="unit1-unit-dropdown"></select>
+                <label>Attacker:
+                    <select class="unit-dropdown"></select>
+                </label>
             </h3>
+
             <h4>
-                <label for="unit1-level-dropdown">Level:</label>
-                <select id="unit1-level-dropdown"></select>
+                <label>Level:
+                    <select class="level-dropdown"></select>
+                </label>
             </h4>
-            <div class="unit-portrait-container">
+
+            <h4>
+                <label>Job:
+                    <select class="job-dropdown"></select>
+                </label>
+            </h4>
+
+            <div class="portrait-container">
                 <img class="unit-portrait flip-horizontal" src="">
             </div>
 
             <div class="weapon-info">
-                <label for="unit1-weapon-dropdown"></label>
-                <select id="unit1-weapon-dropdown"></select>
+                <label>
+                    <select class="weapon-dropdown"></select>
+                </label>
                 <img class="weapon-type" src="">
                 <img class="weapon-name" src="">
             </div>
         </div>
 
         <div class="top-containers">
-            <table>
+            <table class="unit-stats">
                 <tbody>
                 <tr>
-                    <th><br><br><br></th>
+                    <th><br></th>
                 </tr>
                 <tr>
                     <td>
@@ -84,12 +98,130 @@ TODO: Add title and helpful documentation.
                 </tr>
                 <tr>
                     <td>
-                        <label>Speed</label>
-                        <input class="stat" name="speed" type="text">
+                        <label>Speed
+                            <input class="stat" name="speed" type="text">
+                        </label>
                     </td>
                     <td>
                         <label>Con</label>
                         <input class="stat" name="constitution" type="text">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <table class="unit-skills">
+                <tbody>
+                <tr>
+                    <td>
+                        <label>Sword
+                            <select class="sword">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td>
+                        <label>Axe
+                            <select class="axe">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Lance
+                            <select class="lance">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td>
+                        <label>Bow
+                            <select class="bow">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Anima
+                            <select class="anima">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td>
+                        <label>Dark
+                            <select class="dark">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Light
+                            <select class="light">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td>
+                        <label>Staff
+                            <select class="staff">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
                     </td>
                 </tr>
                 </tbody>
@@ -105,8 +237,9 @@ TODO: Add title and helpful documentation.
             <p class="critical"></p>
 
             <h4>
-                <label for="unit1-terrain-dropdown">Terrain:</label>
-                <select id="unit1-terrain-dropdown"></select>
+                <label>Terrain:
+                    <select class="terrain-dropdown"></select>
+                </label>
             </h4>
         </div>
 
@@ -134,7 +267,7 @@ TODO: Add title and helpful documentation.
         <div class="top-containers">
             <table>
                 <tr>
-                    <th><br><br><br></th>
+                    <th><br></th>
                 </tr>
                 <tr>
                     <td>
@@ -177,24 +310,154 @@ TODO: Add title and helpful documentation.
                     </td>
                 </tr>
             </table>
+
+            <br>
+
+            <table class="unit-skills">
+                <tbody>
+                <tr>
+                    <td>
+                        <label>Sword
+                            <select class="sword">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td>
+                        <label>Axe
+                            <select class="axe">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Lance
+                            <select class="lance">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td>
+                        <label>Bow
+                            <select class="bow">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Anima
+                            <select class="anima">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td>
+                        <label>Dark
+                            <select class="dark">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Light
+                            <select class="light">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                    <td>
+                        <label>Staff
+                            <select class="staff">
+                                <option value="0">-</option>
+                                <option value="1">E</option>
+                                <option value="2">D</option>
+                                <option value="3">C</option>
+                                <option value="4">B</option>
+                                <option value="5">A</option>
+                                <option value="6">S</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="top-containers">
             <h3 class="unit-name">
-                <label for="unit2-unit-dropdown">Defender:</label>
-                <select id="unit2-unit-dropdown"></select>
+                <label>Defender:
+                    <select class="unit-dropdown"></select>
+                </label>
             </h3>
+
             <h4>
-                <label for="unit2-level-dropdown">Level:</label>
-                <select id="unit2-level-dropdown"></select>
+                <label>Level:
+                    <select class="level-dropdown"></select>
+                </label>
             </h4>
-            <div class="unit-portrait-container">
-                <img class="unit-portrait" src="">
+
+            <h4>
+                <label>Job:
+                    <select class="job-dropdown"></select>
+                </label>
+            </h4>
+
+            <div class="portrait-container">
+                <img class="unit-portrait flip-horizontal" src="">
             </div>
 
             <div class="weapon-info">
-                <label for="unit2-weapon-dropdown"></label>
-                <select id="unit2-weapon-dropdown"></select>
+                <label>
+                    <select class="weapon-dropdown"></select>
+                </label>
                 <img class="weapon-type" src="">
                 <img class="weapon-name" src="">
             </div>
@@ -209,8 +472,9 @@ TODO: Add title and helpful documentation.
             <p class="critical"></p>
 
             <h4>
-                <label for="unit2-terrain-dropdown">Terrain:</label>
-                <select id="unit2-terrain-dropdown"></select>
+                <label>Terrain:
+                    <select class="terrain-dropdown"></select>
+                </label>
             </h4>
         </div>
 

@@ -258,7 +258,7 @@
     {
         "name":"Rapier",
         "weaponType":"sword",
-        "rank":6,
+        "rank":0,
         "uses":40,
         "weight":5,
         "might":7,
@@ -517,7 +517,7 @@
     {
         "name":"Sieglinde",
         "weaponType":"sword",
-        "rank":6,
+        "rank":0,
         "uses":30,
         "weight":9,
         "might":16,
@@ -935,7 +935,7 @@
     {
         "name":"Reginleif",
         "weaponType":"lance",
-        "rank":6,
+        "rank":0,
         "uses":45,
         "weight":8,
         "might":10,
@@ -1033,7 +1033,7 @@
     {
         "name":"Siegmund",
         "weaponType":"lance",
-        "rank":6,
+        "rank":0,
         "uses":30,
         "weight":11,
         "might":17,

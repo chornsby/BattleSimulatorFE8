@@ -1,10 +1,10 @@
-function StatGrowths(HP, power, skill, speed, luck, defence, resistance) {
+function StatGrowths(statGrowthsJSON) {
     // Represent the stat growths of a unit as percentages.
-    this.HP = HP;
-    this.power = power;
-    this.skill = skill;
-    this.speed = speed;
-    this.luck = luck;
-    this.defence = defence;
-    this.resistance = resistance;
+    this.HP = statGrowthsJSON.HP;
+    this.power = statGrowthsJSON.power;
+    this.skill = statGrowthsJSON.skill;
+    this.speed = statGrowthsJSON.speed;
+    this.luck = statGrowthsJSON.luck;
+    this.defence = statGrowthsJSON.defence;
+    this.resistance = statGrowthsJSON.resistance;
 }
