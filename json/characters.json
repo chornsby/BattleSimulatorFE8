@@ -159,15 +159,15 @@
 
         "job":"Knight",
 
-        "baseLevel":4,
+        "baseLevel":1,
 
-        "HP":25,
-        "power":9,
-        "skill":6,
-        "speed":3,
-        "luck":3,
-        "defence":9,
-        "resistance":3,
+        "HP":22.3,
+        "power":7.65,
+        "skill":4.95,
+        "speed":2.1,
+        "luck":2.1,
+        "defence":7.35,
+        "resistance":2.4,
         "constitution":14,
 
         "weaponSkill":{
@@ -273,15 +273,15 @@
 
         "job":"Fighter",
 
-        "baseLevel":4,
+        "baseLevel":1,
 
-        "HP":28,
-        "power":8,
-        "skill":7,
-        "speed":7,
-        "luck":3,
-        "defence":5,
-        "resistance":1,
+        "HP":25.6,
+        "power":6.05,
+        "skill":5.8,
+        "speed":6.4,
+        "luck":1.8,
+        "defence":4.25,
+        "resistance":0.55,
         "constitution":14,
 
         "weaponSkill":{
@@ -349,15 +349,15 @@
 
         "job":"Thief",
 
-        "baseLevel":2,
+        "baseLevel":1,
 
-        "HP":18,
-        "power":4,
-        "skill":4,
-        "speed":10,
-        "luck":8,
-        "defence":3,
-        "resistance":1,
+        "HP":17.25,
+        "power":3.6,
+        "skill":3.6,
+        "speed":19.35,
+        "luck":7.55,
+        "defence":2.75,
+        "resistance":0.8,
         "constitution":6,
 
         "weaponSkill":{
@@ -387,15 +387,15 @@
 
         "job":"Monk",
 
-        "baseLevel":2,
+        "baseLevel":1,
 
-        "HP":19,
-        "power":6,
-        "skill":6,
-        "speed":8,
-        "luck":2,
-        "defence":2,
-        "resistance":6,
+        "HP":18.45,
+        "power":5.5,
+        "skill":5.5,
+        "speed":7.6,
+        "luck":1.75,
+        "defence":1.85,
+        "resistance":5.45,
         "constitution":6,
 
         "weaponSkill":{
@@ -463,15 +463,15 @@
 
         "job":"Myrmidon",
 
-        "baseLevel":5,
+        "baseLevel":1,
 
-        "HP":24,
-        "power":8,
-        "skill":13,
-        "speed":14,
-        "luck":7,
-        "defence":5,
-        "resistance":2,
+        "HP":20.8,
+        "power":6.6,
+        "skill":10.8,
+        "speed":11.8,
+        "luck":5.8,
+        "defence":4.2,
+        "resistance":1.2,
         "constitution":8,
 
         "weaponSkill":{
@@ -502,15 +502,15 @@
 
         "job":"Ephraim Lord",
 
-        "baseLevel":4,
+        "baseLevel":1,
 
-        "HP":23,
-        "power":8,
-        "skill":9,
-        "speed":11,
-        "luck":8,
-        "defence":7,
-        "resistance":2,
+        "HP":20.6,
+        "power":6.35,
+        "skill":7.35,
+        "speed":9.65,
+        "luck":6.5,
+        "defence":5.95,
+        "resistance":1.25,
         "constitution":8,
 
         "weaponSkill":{
@@ -540,15 +540,15 @@
 
         "job":"Cavalier",
 
-        "baseLevel":6,
+        "baseLevel":1,
 
-        "HP":24,
-        "power":7,
-        "skill":8,
-        "speed":8,
-        "luck":7,
-        "defence":8,
-        "resistance":2,
+        "HP":19.75,
+        "power":5,
+        "skill":5.5,
+        "speed":5.75,
+        "luck":5.25,
+        "defence":7,
+        "resistance":0.75,
         "constitution":9,
 
         "weaponSkill":{
@@ -579,15 +579,15 @@
 
         "job":"Cavalier",
 
-        "baseLevel":5,
+        "baseLevel":1,
 
-        "HP":25,
-        "power":9,
-        "skill":6,
-        "speed":7,
-        "luck":6,
-        "defence":9,
-        "resistance":1,
+        "HP":21.4,
+        "power":7,
+        "skill":4.4,
+        "speed":5.4,
+        "luck":5.2,
+        "defence":8,
+        "resistance":0.2,
         "constitution":10,
 
         "weaponSkill":{
@@ -618,15 +618,15 @@
 
         "job":"Paladin",
 
-        "baseLevel":3,
+        "baseLevel":1,
 
-        "HP":34,
-        "power":15,
-        "skill":13,
-        "speed":11,
-        "luck":4,
-        "defence":13,
-        "resistance":7,
+        "HP":32.4,
+        "power":13.9,
+        "skill":12.1,
+        "speed":10.2,
+        "luck":3.5,
+        "defence":12.1,
+        "resistance":6.4,
         "constitution":12,
 
         "weaponSkill":{
@@ -657,15 +657,15 @@
 
         "job":"Pegasus Knight",
 
-        "baseLevel":4,
+        "baseLevel":1,
 
-        "HP":20,
-        "power":8,
-        "skill":8,
-        "speed":12,
-        "luck":8,
-        "defence":7,
-        "resistance":7,
+        "HP":18.05,
+        "power":5.65,
+        "skill":7.8,
+        "speed":11.05,
+        "luck":6.2,
+        "defence":5.4,
+        "resistance":6.25,
         "constitution":5,
 
         "weaponSkill":{
@@ -774,15 +774,15 @@
 
         "job":"Mercenary",
 
-        "baseLevel":10,
+        "baseLevel":1,
 
-        "HP":32,
-        "power":14,
-        "skill":13,
-        "speed":13,
-        "luck":8,
-        "defence":10,
-        "resistance":4,
+        "HP":23.9,
+        "power":9.95,
+        "skill":9.4,
+        "speed":10.3,
+        "luck":5.3,
+        "defence":6.85,
+        "resistance":1.75,
         "constitution":13,
 
         "weaponSkill":{
@@ -813,15 +813,15 @@
 
         "job":"Myrmidon",
 
-        "baseLevel":5,
+        "baseLevel":1,
 
-        "HP":23,
-        "power":7,
-        "skill":12,
-        "speed":13,
-        "luck":9,
-        "defence":4,
-        "resistance":3,
+        "HP":20,
+        "power":5.8,
+        "skill":9.8,
+        "speed":10.6,
+        "luck":7,
+        "defence":3.4,
+        "resistance":2,
         "constitution":5,
 
         "weaponSkill":{
@@ -969,15 +969,15 @@
 
         "job":"Wyvern Rider",
 
-        "baseLevel":9,
+        "baseLevel":1,
 
-        "HP":30,
-        "power":14,
-        "skill":9,
-        "speed":10,
-        "luck":4,
-        "defence":12,
-        "resistance":2,
+        "HP":23.2,
+        "power":9.6,
+        "skill":5.8,
+        "speed":6.4,
+        "luck":1.2,
+        "defence":10,
+        "resistance":0.8,
         "constitution":11,
 
         "weaponSkill":{
@@ -1047,15 +1047,15 @@
 
         "job":"Great Knight",
 
-        "baseLevel":10,
+        "baseLevel":1,
 
-        "HP":41,
-        "power":17,
-        "skill":12,
-        "speed":12,
-        "luck":8,
-        "defence":17,
-        "resistance":9,
+        "HP":35.05,
+        "power":13.15,
+        "skill":9.2,
+        "speed":9.9,
+        "luck":6.6,
+        "defence":13.85,
+        "resistance":6.9,
         "constitution":15,
 
         "weaponSkill":{
@@ -1086,15 +1086,15 @@
 
         "job":"Shaman",
 
-        "baseLevel":10,
+        "baseLevel":1,
 
-        "HP":22,
-        "power":12,
-        "skill":9,
-        "speed":8,
-        "luck":0,
-        "defence":2,
-        "resistance":10,
+        "HP":15.4,
+        "power":8,
+        "skill":5.8,
+        "speed":5.2,
+        "luck":-1.6,
+        "defence":1.2,
+        "resistance":6.4,
         "constitution":7,
 
         "weaponSkill":{
@@ -1156,83 +1156,5 @@
             "resistance":50
         }
 
-    },
-
-    {
-        "name":"O'Neill",
-
-        "job":"Fighter",
-
-        "baseLevel":4,
-
-        "HP":23,
-        "maxHP":23,
-        "power":6,
-        "skill":4,
-        "speed":7,
-        "luck":0,
-        "defence":2,
-        "resistance":0,
-        "constitution":11,
-
-        "weaponSkill":{
-            "sword":0,
-            "lance":0,
-            "axe":3,
-            "bow":0,
-            "anima":0,
-            "dark":0,
-            "light":0,
-            "staff":0
-        },
-
-        "statGrowths":{
-            "HP":0,
-            "power":0,
-            "skill":0,
-            "speed":0,
-            "luck":0,
-            "defence":0,
-            "resistance":0
-        }
-    },
-
-    {
-        "name":"Breguet",
-
-        "job":"Knight",
-
-        "baseLevel":4,
-
-        "HP":20,
-        "maxHP":23,
-        "power":8,
-        "skill":2,
-        "speed":1,
-        "luck":2,
-        "defence":9,
-        "resistance":0,
-        "constitution":13,
-
-        "weaponSkill":{
-            "sword":0,
-            "lance":3,
-            "axe":0,
-            "bow":0,
-            "anima":0,
-            "dark":0,
-            "light":0,
-            "staff":0
-        },
-
-        "statGrowths":{
-            "HP":0,
-            "power":0,
-            "skill":0,
-            "speed":0,
-            "luck":0,
-            "defence":0,
-            "resistance":0
-        }
     }
 ]
