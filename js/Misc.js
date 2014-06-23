@@ -43,6 +43,11 @@ var capAboveZero = function(n) {
     return n;
 };
 
+var roundAboveZero = function(n) {
+    // Return a rounded value capped above zero.
+    return Math.round(capAboveZero(n));
+};
+
 var percentChance = function() {
     // Return a random integer between 0 and 99 inclusive.
     return Math.floor(Math.random() * 100);

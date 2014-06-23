@@ -38,7 +38,7 @@
 
         "promotions": {
             "Eirika Great Lord": {
-                "HP": 4,
+                "maxHP": 4,
                 "power": 2,
                 "skill": 2,
                 "speed": 1,
@@ -129,7 +129,7 @@
         "promotions": {
 
             "Paladin": {
-                "HP": 2,
+                "maxHP": 2,
                 "power": 1,
                 "skill": 1,
                 "speed": 1,
@@ -141,7 +141,7 @@
             },
 
             "Great Knight": {
-                "HP": 3,
+                "maxHP": 3,
                 "power": 2,
                 "skill": 1,
                 "speed": 2,

@@ -1,4 +1,5 @@
-var fliers = ["Pegasus Knight", "Falcon Knight", "Wyvern Rider", "Wyvern Lord", "Wyvern Knight"];
+// TODO: Stat caps for classes.
+// TODO: More promotions in characters.json.
 
 function Unit(characterJSON) {
     
@@ -6,21 +7,23 @@ function Unit(characterJSON) {
 
     this.name = characterJSON.name;
     this.job = characterJSON.job;
+    this.baseJob = characterJSON.job;
     this.baseLevel = characterJSON.baseLevel;
     this.level = characterJSON.baseLevel;
 
-    this.HP = characterJSON.HP;
-    this.maxHP = characterJSON.HP;
-    this.power = characterJSON.power;
-    this.skill = characterJSON.skill;
-    this.speed = characterJSON.speed;
-    this.luck = characterJSON.luck;
-    this.defence = characterJSON.defence;
-    this.resistance = characterJSON.resistance;
+    this.HP = roundAboveZero(characterJSON.HP);
+    this.maxHP = roundAboveZero(characterJSON.HP);
+    this.power = roundAboveZero(characterJSON.power);
+    this.skill = roundAboveZero(characterJSON.skill);
+    this.speed = roundAboveZero(characterJSON.speed);
+    this.luck = roundAboveZero(characterJSON.luck);
+    this.defence = roundAboveZero(characterJSON.defence);
+    this.resistance = roundAboveZero(characterJSON.resistance);
     this.constitution = characterJSON.constitution;
 
     this.weaponSkill = new WeaponSkill(characterJSON.weaponSkill);
     this.statGrowths = new StatGrowths(characterJSON.statGrowths);
+    this.promotions = characterJSON.promotions;
 
     this.weapon = null;
     this.terrain = null;
@@ -234,14 +237,33 @@ function Unit(characterJSON) {
         this.defence = this.JSON.defence;
         this.resistance = this.JSON.resistance;
 
+        // Add promotion gains.
+        if (this.job != this.baseJob) {
+            this.maxHP += this.promotions[this.job].maxHP;
+            this.power += this.promotions[this.job].power;
+            this.skill += this.promotions[this.job].skill;
+            this.speed += this.promotions[this.job].speed;
+            this.luck += this.promotions[this.job].luck;
+            this.defence += this.promotions[this.job].defence;
+            this.resistance += this.promotions[this.job].resistance;
+        }
+
         // Level up stats.
-        this.maxHP += Math.round((newLevel - 1) * this.statGrowths.HP / 100);
-        this.power += Math.round((newLevel - 1) * this.statGrowths.power / 100);
-        this.skill += Math.round((newLevel - 1) * this.statGrowths.skill / 100);
-        this.speed += Math.round((newLevel - 1) * this.statGrowths.speed / 100);
-        this.luck += Math.round((newLevel - 1) * this.statGrowths.luck / 100);
-        this.defence += Math.round((newLevel - 1) * this.statGrowths.defence / 100);
-        this.resistance += Math.round((newLevel - 1) * this.statGrowths.resistance / 100);
+        this.maxHP += (newLevel - 2) * this.statGrowths.HP / 100;
+        this.power += (newLevel - 2) * this.statGrowths.power / 100;
+        this.skill += (newLevel - 2) * this.statGrowths.skill / 100;
+        this.speed += (newLevel - 2) * this.statGrowths.speed / 100;
+        this.luck += (newLevel - 2) * this.statGrowths.luck / 100;
+        this.defence += (newLevel - 2) * this.statGrowths.defence / 100;
+        this.resistance += (newLevel - 2) * this.statGrowths.resistance / 100;
+
+        this.maxHP = roundAboveZero(this.maxHP);
+        this.power = roundAboveZero(this.power);
+        this.skill = roundAboveZero(this.skill);
+        this.speed = roundAboveZero(this.speed);
+        this.luck = roundAboveZero(this.luck);
+        this.defence = roundAboveZero(this.defence);
+        this.resistance = roundAboveZero(this.resistance);
 
         // TODO: Normalise stats to class maximums.
 
@@ -252,11 +274,7 @@ function Unit(characterJSON) {
 
     this.copy = function() {
         // Return a fresh copy of the object.
-        var copy = new Unit(this.JSON);
-
-        copy.setTerrain(this.terrain);
-
-        return copy;
+        return new Unit(this.JSON);
     };
 
 }
