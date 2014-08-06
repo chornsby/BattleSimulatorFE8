@@ -528,7 +528,7 @@
         "weaponExp":1,
         "cost":0,
 
-        "usedBy":["Eirika Lord"],
+        "usedBy":["Eirika Lord", "Eirika Great Lord"],
 
         "reaver":false,
         "poison":false,
