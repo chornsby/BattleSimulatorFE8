@@ -1,3 +1,7 @@
+Array.prototype.contains = function(i) {
+    return this.indexOf(i) > -1;
+};
+
 Array.prototype.peek = function() {
     // Return a random object from an array.
     var index = Math.floor(Math.random() * this.length);
