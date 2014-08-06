@@ -1,0 +1,79 @@
+[
+    {
+        "name":"O'Neill",
+
+        "job":"Fighter",
+
+        "baseLevel":4,
+
+        "HP":23,
+        "maxHP":23,
+        "power":6,
+        "skill":4,
+        "speed":7,
+        "luck":0,
+        "defence":2,
+        "resistance":0,
+        "constitution":11,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":0,
+            "axe":3,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":0,
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    },
+
+    {
+        "name":"Breguet",
+
+        "job":"Knight",
+
+        "baseLevel":4,
+
+        "HP":20,
+        "maxHP":23,
+        "power":8,
+        "skill":2,
+        "speed":1,
+        "luck":2,
+        "defence":9,
+        "resistance":0,
+        "constitution":13,
+
+        "weaponSkill":{
+            "sword":0,
+            "lance":3,
+            "axe":0,
+            "bow":0,
+            "anima":0,
+            "dark":0,
+            "light":0,
+            "staff":0
+        },
+
+        "statGrowths":{
+            "HP":0,
+            "power":0,
+            "skill":0,
+            "speed":0,
+            "luck":0,
+            "defence":0,
+            "resistance":0
+        }
+    }
+]

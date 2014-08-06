@@ -1,29 +1,18 @@
 <!--
-TODO: Add input access to unit stats variables.
-TODO: Add title and helpful documentation.
+TODO: Add helpful documentation.
 -->
 
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Battle simulator for Fire Emblem: Sacred Stones</title>
-
+    <title>Battle calculator for Fire Emblem: Sacred Stones</title>
     <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
-
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-    <script type="text/javascript" src="js/Misc.js"></script>
-    <script type="text/javascript" src="js/Terrain.js"></script>
-    <script type="text/javascript" src="js/Weapon.js"></script>
-    <script type="text/javascript" src="js/WeaponSkill.js"></script>
-    <script type="text/javascript" src="js/StatGrowths.js"></script>
-    <script type="text/javascript" src="js/Job.js"></script>
-    <script type="text/javascript" src="js/Unit.js"></script>
-    <script type="text/javascript" src="js/Battle.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+
+    <h2>Battle Calculator for Fire Emblem: Sacred Stones</h2>
+    <p>Calculate the odds of a battle by changing unit and weapon details.</p>
 
     <div id="attacker" class="unit-container">
 
@@ -37,7 +26,11 @@ TODO: Add title and helpful documentation.
 
             <h4>
                 <label>Level:
-                    <select class="level-dropdown"></select>
+                    <select class="level-dropdown">
+                    </select>
+
+                    <select class="promoted-level-dropdown">
+                    </select>
                 </label>
             </h4>
 
@@ -440,7 +433,11 @@ TODO: Add title and helpful documentation.
 
             <h4>
                 <label>Level:
-                    <select class="level-dropdown"></select>
+                    <select class="level-dropdown">
+                    </select>
+
+                    <select class="promoted-level-dropdown">
+                    </select>
                 </label>
             </h4>
 
@@ -485,5 +482,16 @@ TODO: Add title and helpful documentation.
         <textarea id="battle-log" rows="14" cols="57"></textarea>
     </div>
 
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/Misc.js"></script>
+    <script type="text/javascript" src="js/Terrain.js"></script>
+    <script type="text/javascript" src="js/Weapon.js"></script>
+    <script type="text/javascript" src="js/WeaponSkill.js"></script>
+    <script type="text/javascript" src="js/StatGrowths.js"></script>
+    <script type="text/javascript" src="js/Job.js"></script>
+    <script type="text/javascript" src="js/Unit.js"></script>
+    <script type="text/javascript" src="js/Battle.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

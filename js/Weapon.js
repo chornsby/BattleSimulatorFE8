@@ -22,19 +22,21 @@ function Weapon(weaponJSON) {
     this.effectiveAgainst = weaponJSON.effectiveAgainst;
 
     this.statBoosts = weaponJSON.statBoosts;
+}
 
-    var physicalTypes = ["sword", "lance", "axe", "bow"];
-    var magicTypes = ["anima", "dark", "light"];
+Weapon.prototype = {
+    physicalTypes: ["sword", "lance", "axe", "bow"],
+    magicTypes: ["anima", "dark", "light"],
 
-    this.isPhysical = function() {
-        return physicalTypes.indexOf(this.weaponType) > -1;
-    };
+    isPhysical: function () {
+        return this.physicalTypes.contains(this.weaponType);
+    },
 
-    this.isMagical = function() {
-        return magicTypes.indexOf(this.weaponType) > -1;
-    };
+    isMagical: function () {
+        return this.magicTypes.contains(this.weaponType);
+    },
 
-    this.weaponTriangleBonus = function(that) {
+    weaponTriangleBonus: function (that) {
         // Return 1 if the attacker has a bonus due to the triangle.
         // Return 0 if there is no bonus.
         // Return -1 if the attacker suffers a penalty due to the triangle.
@@ -102,4 +104,4 @@ function Weapon(weaponJSON) {
         console.log('Unknown weapon type: ' + this.weaponType);
         return 0;
     }
-}
+};

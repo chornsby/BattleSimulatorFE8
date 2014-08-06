@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 
+    // TODO: Preload pictures and store in objects.
+
     var Characters = {};
     var Weapons = {};
 //    var Jobs = {};
@@ -50,12 +52,14 @@ $(document).ready(function() {
 
     var $unit1UnitDropdown = $attacker.find('.unit-dropdown');
     var $unit1LevelDropdown = $attacker.find('.level-dropdown');
+    var $unit1PromotedLevelDropdown = $attacker.find('.promoted-level-dropdown');
     var $unit1JobDropdown = $attacker.find('.job-dropdown');
     var $unit1TerrainDropdown = $attacker.find('.terrain-dropdown');
     var $unit1WeaponDropdown = $attacker.find('.weapon-dropdown');
 
     var $unit2UnitDropdown = $defender.find('.unit-dropdown');
     var $unit2LevelDropdown = $defender.find('.level-dropdown');
+    var $unit2PromotedLevelDropdown = $defender.find('.promoted-level-dropdown');
     var $unit2JobDropdown = $defender.find('.job-dropdown');
     var $unit2TerrainDropdown = $defender.find('.terrain-dropdown');
     var $unit2WeaponDropdown = $defender.find('.weapon-dropdown');
@@ -93,25 +97,25 @@ $(document).ready(function() {
             $div.find('.critical').text("Crit --");
         }
 
-        var statsTable = $div.find('td input');
-        statsTable.eq(0).val(unitA.maxHP);
-        statsTable.eq(1).val(unitA.luck);
-        statsTable.eq(2).val(unitA.power);
-        statsTable.eq(3).val(unitA.defence);
-        statsTable.eq(4).val(unitA.skill);
-        statsTable.eq(5).val(unitA.resistance);
-        statsTable.eq(6).val(unitA.speed);
-        statsTable.eq(7).val(unitA.constitution);
+        var $statsTable = $div.find('td input');
+        $statsTable.eq(0).val(unitA.maxHP);
+        $statsTable.eq(1).val(unitA.luck);
+        $statsTable.eq(2).val(unitA.power);
+        $statsTable.eq(3).val(unitA.defence);
+        $statsTable.eq(4).val(unitA.skill);
+        $statsTable.eq(5).val(unitA.resistance);
+        $statsTable.eq(6).val(unitA.speed);
+        $statsTable.eq(7).val(unitA.constitution);
 
-        var skillTable = $div.find('td select');
-        skillTable.eq(0).find("option").eq(unitA.weaponSkill.sword).prop("selected", true);
-        skillTable.eq(1).find("option").eq(unitA.weaponSkill.axe).prop("selected", true);
-        skillTable.eq(2).find("option").eq(unitA.weaponSkill.lance).prop("selected", true);
-        skillTable.eq(3).find("option").eq(unitA.weaponSkill.bow).prop("selected", true);
-        skillTable.eq(4).find("option").eq(unitA.weaponSkill.anima).prop("selected", true);
-        skillTable.eq(5).find("option").eq(unitA.weaponSkill.dark).prop("selected", true);
-        skillTable.eq(6).find("option").eq(unitA.weaponSkill.light).prop("selected", true);
-        skillTable.eq(7).find("option").eq(unitA.weaponSkill.staff).prop("selected", true);
+        var $skillTable = $div.find('td select');
+        $skillTable.eq(0).find("option").eq(unitA.weaponSkill.sword).prop("selected", true);
+        $skillTable.eq(1).find("option").eq(unitA.weaponSkill.axe).prop("selected", true);
+        $skillTable.eq(2).find("option").eq(unitA.weaponSkill.lance).prop("selected", true);
+        $skillTable.eq(3).find("option").eq(unitA.weaponSkill.bow).prop("selected", true);
+        $skillTable.eq(4).find("option").eq(unitA.weaponSkill.anima).prop("selected", true);
+        $skillTable.eq(5).find("option").eq(unitA.weaponSkill.dark).prop("selected", true);
+        $skillTable.eq(6).find("option").eq(unitA.weaponSkill.light).prop("selected", true);
+        $skillTable.eq(7).find("option").eq(unitA.weaponSkill.staff).prop("selected", true);
 
     };
 
@@ -139,16 +143,55 @@ $(document).ready(function() {
         }
     };
 
-    var updateLevelDropdown = function(unit, $dropdownSelector) {
-        $dropdownSelector.empty();
-        for (var i = unit.baseLevel; i < 21; i++) {
-            $dropdownSelector.append(new Option(i, i));
+    var updateLevelDropdown = function(unit, $unpromoted, $promoted) {
+
+        var i;
+
+        if (Job.prototype.promotedJobs.indexOf(unit.baseJob) > -1) {
+
+            $unpromoted.empty();
+            $unpromoted.append(new Option("-", 1));
+
+            $promoted.empty();
+            for (i = 1; i < 21; i++) {
+                $promoted.append(new Option(i, i));
+            }
+
+        } else if (Job.prototype.promotedJobs.indexOf(unit.job) > -1) {
+
+            $unpromoted.empty();
+            for (i = 1; i < 21; i++) {
+                $unpromoted.append(new Option(i, i));
+            }
+
+            $promoted.empty();
+            for (i = 1; i < 21; i++) {
+                $promoted.append(new Option(i, i));
+            }
+
+        } else {
+
+            $unpromoted.empty();
+            for (i = 1; i < 21; i++) {
+                $unpromoted.append(new Option(i, i));
+            }
+
+            $promoted.empty();
+            $promoted.append(new Option("-", 1));
+
         }
+
+        $unpromoted.find("option").eq(0).prop("selected", true);
+        $promoted.find("option").eq(0).prop("selected", true);
     };
 
     var updateJobDropdown = function(unit, $dropdownSelector) {
         $dropdownSelector.empty();
         $dropdownSelector.append(new Option(unit.job, unit.job));
+
+        for (var key in unit.promotions) {
+            $dropdownSelector.append(new Option(key, key));
+        }
     };
 
     var updateWeaponDropdown = function (unit, $dropdownSelector) {
@@ -201,14 +244,16 @@ $(document).ready(function() {
     };
 
     var unit1 = Characters["Eirika"].copy();
-    var unit2 = Characters["Eirika"].copy();
+    var unit2 = Characters["Seth"].copy();
     var separation = $battleSeparationDropdown.val();
 
     updateUnitDropdown($unit1UnitDropdown);
     updateUnitDropdown($unit2UnitDropdown);
 
-    updateLevelDropdown(unit1, $unit1LevelDropdown);
-    updateLevelDropdown(unit2, $unit2LevelDropdown);
+    $unit2UnitDropdown.find("option").eq(1).prop("selected", true);
+
+    updateLevelDropdown(unit1, $unit1LevelDropdown, $unit1PromotedLevelDropdown);
+    updateLevelDropdown(unit2, $unit2LevelDropdown, $unit2PromotedLevelDropdown);
 
     updateJobDropdown(unit1, $unit1JobDropdown);
     updateJobDropdown(unit2, $unit2JobDropdown);
@@ -243,7 +288,7 @@ $(document).ready(function() {
         unit1 = Characters[$unit1UnitDropdown.val()].copy();
 
         updateWeaponDropdown(unit1, $unit1WeaponDropdown);
-        updateLevelDropdown(unit1, $unit1LevelDropdown);
+        updateLevelDropdown(unit1, $unit1LevelDropdown, $unit1PromotedLevelDropdown);
         updateJobDropdown(unit1, $unit1JobDropdown);
 
         unit1.setWeapon(Weapons[$unit1WeaponDropdown.val()]);
@@ -259,7 +304,7 @@ $(document).ready(function() {
         unit2 = Characters[$unit2UnitDropdown.val()].copy();
 
         updateWeaponDropdown(unit2, $unit2WeaponDropdown);
-        updateLevelDropdown(unit2, $unit2LevelDropdown);
+        updateLevelDropdown(unit2, $unit2LevelDropdown, $unit2PromotedLevelDropdown);
         updateJobDropdown(unit2, $unit2JobDropdown);
 
         unit2.setWeapon(Weapons[$unit2WeaponDropdown.val()]);
@@ -269,20 +314,43 @@ $(document).ready(function() {
         showData($attacker, $defender, unit1, unit2, separation);
     });
 
-    $unit1LevelDropdown.change(function() {
+    var levelUnit1 = function() {
         resetHealths();
 
-        unit1.levelTo(parseInt($unit1LevelDropdown.val()));
+        var unpromotedLevel = parseInt($unit1LevelDropdown.val());
+        var promotedLevel = parseInt($unit1PromotedLevelDropdown.val());
+
+        unit1.levelTo(unpromotedLevel + promotedLevel);
 
         showData($attacker, $defender, unit1, unit2, separation);
+    };
+
+    var levelUnit2 = function() {
+        resetHealths();
+
+        var unpromotedLevel = parseInt($unit2LevelDropdown.val());
+        var promotedLevel = parseInt($unit2PromotedLevelDropdown.val());
+
+        unit2.levelTo(unpromotedLevel + promotedLevel);
+
+        showData($attacker, $defender, unit1, unit2, separation);
+    };
+
+
+    $unit1LevelDropdown.change(function() {
+        levelUnit1();
+    });
+
+    $unit1PromotedLevelDropdown.change(function() {
+        levelUnit1();
     });
 
     $unit2LevelDropdown.change(function() {
-        resetHealths();
+        levelUnit2()
+    });
 
-        unit2.levelTo(parseInt($unit2LevelDropdown.val()));
-
-        showData($attacker, $defender, unit1, unit2, separation);
+    $unit2PromotedLevelDropdown.change(function() {
+        levelUnit2();
     });
 
     $unit1WeaponDropdown.change(function () {
@@ -364,6 +432,34 @@ $(document).ready(function() {
         unit2.weaponSkill[this.className] = parseInt(this.value);
 
         updateWeaponDropdown(unit2, $unit2WeaponDropdown);
+        showData($attacker, $defender, unit1, unit2, separation);
+    });
+
+    $unit1JobDropdown.change(function() {
+
+        unit1.job = $unit1JobDropdown.val();
+        updateLevelDropdown(unit1, $unit1LevelDropdown, $unit1PromotedLevelDropdown);
+
+        if (unit1.job != unit1.baseJob && $unit1LevelDropdown.val() < 10) {
+            $unit1LevelDropdown.find("option").eq(9).prop("selected", true);
+        }
+
+        levelUnit1();
+
+        showData($attacker, $defender, unit1, unit2, separation);
+    });
+
+    $unit2JobDropdown.change(function() {
+
+        unit2.job = $unit2JobDropdown.val();
+        updateLevelDropdown(unit2, $unit2LevelDropdown, $unit2PromotedLevelDropdown);
+
+        if (unit2.job != unit2.baseJob && $unit2LevelDropdown.val() < 10) {
+            $unit2LevelDropdown.find("option").eq(9).prop("selected", true);
+        }
+
+        levelUnit2();
+
         showData($attacker, $defender, unit1, unit2, separation);
     });
 
