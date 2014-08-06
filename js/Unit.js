@@ -2,14 +2,14 @@
 // TODO: More promotions in characters.json.
 
 function Unit(characterJSON) {
-    
+
     this.JSON = characterJSON;
 
     this.name = characterJSON.name;
     this.job = characterJSON.job;
     this.baseJob = characterJSON.job;
     this.baseLevel = characterJSON.baseLevel;
-    this.level = characterJSON.baseLevel;
+//    this.level = characterJSON.baseLevel;
 
     this.HP = roundAboveZero(characterJSON.HP);
     this.maxHP = roundAboveZero(characterJSON.HP);
@@ -27,29 +27,32 @@ function Unit(characterJSON) {
 
     this.weapon = null;
     this.terrain = null;
+}
 
-    this.inRange = function(unit, separation) {
+Unit.prototype = {
+
+    inRange: function (unit, separation) {
         // Return true if this is in range to attack the given unit.
         return separation >= this.weapon.minRange && separation <= this.weapon.maxRange;
-    };
+    },
 
-    this.weaponTriangleBonus = function(that) {
+    weaponTriangleBonus: function (that) {
         // Return 1 if the attacker has a bonus due to the triangle.
         // Return 0 if there is no bonus.
         // Return -1 if the attacker suffers a penalty due to the triangle.
         return this.weapon.weaponTriangleBonus(that.weapon);
-    };
+    },
 
-    this.weaponEffectiveness = function(that) {
+    weaponEffectiveness: function (that) {
         // Return the effectiveness coefficient for an attacker.
         if (this.weapon.effectiveAgainst.indexOf(that.job) > -1) {
             return 3;
         }
 
         return 1;
-    };
+    },
 
-    this.attackPower = function(that) {
+    attackPower: function (that) {
         // Return the attack power based on weapon might and stats.
         var unitStrength = this.power;
         var weaponMight = this.weapon.might;
@@ -57,9 +60,9 @@ function Unit(characterJSON) {
         var effectiveness = this.weaponEffectiveness(that);
 
         return unitStrength + (weaponMight + triangleBonus) * effectiveness;
-    };
+    },
 
-    this.attackSpeed = function() {
+    attackSpeed: function () {
         // Return the attack speed based on weapon weight and stats.
         var weaponWeight = this.weapon.weight;
         var constitution = this.constitution;
@@ -69,41 +72,41 @@ function Unit(characterJSON) {
         }
 
         return this.speed;
-    };
+    },
 
-    this.isRepeatedAttack = function(that) {
+    isRepeatedAttack: function (that) {
         // Return true if this unit can strike twice.
         var attackerAS = this.attackSpeed();
         var defenderAS = that.attackSpeed();
 
         return attackerAS > defenderAS + 3;
-    };
+    },
 
-    this.physicalDefence = function() {
+    physicalDefence: function () {
         // Return the defence power based on stats.
         var terrainDefence = this.terrain.defence;
         var unitDefence = this.defence;
 
-        if (fliers.indexOf(this.job) > -1) {
+        if (Job.prototype.fliers.indexOf(this.job) > -1) {
             return unitDefence;
         }
 
         return terrainDefence + unitDefence;
-    };
+    },
 
-    this.magicalDefence = function() {
+    magicalDefence: function () {
         // Return the defence power based on stats.
         var terrainDefence = this.terrain.defence;
         var unitResistance = this.resistance;
 
-        if (fliers.indexOf(this.job) > -1) {
+        if (Job.prototype.fliers.indexOf(this.job) > -1) {
             return unitResistance;
         }
 
         return terrainDefence + unitResistance;
-    };
+    },
 
-    this.damage = function(that) {
+    damage: function (that) {
         // Return the potential damage caused by an attacker.
         var attackPower = this.attackPower(that);
 
@@ -116,9 +119,9 @@ function Unit(characterJSON) {
         }
 
         return 0;
-    };
+    },
 
-    this.hitRate = function() {
+    hitRate: function () {
         // Return the hit rate based on unit's accuracy and weapon.
         var weaponAccuracy = this.weapon.hit;
         var skillTerm = 2 * this.skill;
@@ -130,31 +133,31 @@ function Unit(characterJSON) {
         }
 
         return weaponAccuracy + skillTerm + luckTerm + sRankBonus;
-    };
+    },
 
-    this.evadeRate = function() {
+    evadeRate: function () {
         // Return the evade rate based on a unit's speed and terrain.
         var attackSpeedTerm = 2 * this.attackSpeed();
         var luckTerm = this.luck;
         var terrainTerm = this.terrain.avoid;
 
-        if (fliers.indexOf(this.job) > -1) {
+        if (Job.prototype.fliers.contains(this.job)) {
             return attackSpeedTerm + luckTerm;
         }
 
         return attackSpeedTerm + luckTerm + terrainTerm;
-    };
+    },
 
-    this.accuracy = function(that) {
+    accuracy: function (that) {
         // Return the accuracy of this unit.
         var hitRate = this.hitRate();
         var evadeRate = that.evadeRate();
         var triangleBonus = 15 * this.weaponTriangleBonus(that);
 
         return capToPercent(hitRate - evadeRate + triangleBonus);
-    };
+    },
 
-    this.criticalRate = function() {
+    criticalRate: function () {
         // Return the critical rate based on weapon and unit's skill.
         var weaponCritical = this.weapon.crit;
         var skillTerm = Math.floor(0.5 * this.skill);
@@ -171,32 +174,33 @@ function Unit(characterJSON) {
         }
 
         return weaponCritical + skillTerm + classCritical + sRankBonus;
-    };
+    },
 
-    this.criticalEvadeRate = function() {
+    criticalEvadeRate: function () {
         // Return the critical evade rate based on unit's luck.
         return this.luck;
-    };
+    },
 
-    this.criticalChance = function(that) {
+    criticalChance: function (that) {
         // Return the critical chance of attacker.
         var criticalRate = this.criticalRate();
         var criticalEvadeRate = that.criticalEvadeRate();
 
         return capToPercent(criticalRate - criticalEvadeRate);
-    };
+    },
 
-    this.setTerrain = function(newTerrain) {
+    setTerrain: function (newTerrain) {
         // Set the terrain for the unit.
         this.terrain = newTerrain;
-    };
+    },
 
-    this.setWeapon = function(newWeapon) {
+    setWeapon: function (newWeapon) {
         // Set the weapon for the unit.
+        var key;
 
         // First remove old stat boosts (if applicable).
         if (this.weapon != null) {
-            for (var key in this.weapon.statBoosts) {
+            for (key in this.weapon.statBoosts) {
                 this[key] -= this.weapon.statBoosts[key];
             }
         }
@@ -205,12 +209,12 @@ function Unit(characterJSON) {
         this.weapon = newWeapon;
 
         // Finally, add new stat boosts (if applicable).
-        for (var key in newWeapon.statBoosts) {
+        for (key in newWeapon.statBoosts) {
             this[key] += newWeapon.statBoosts[key];
         }
-    };
+    },
 
-    this.normaliseHP = function() {
+    normaliseHP: function () {
         // If HP drops below 0 then set to 0.
         // If HP rises above max then set to max.
         if (this.HP < 0) {
@@ -218,14 +222,14 @@ function Unit(characterJSON) {
         } else if (this.HP > this.maxHP) {
             this.HP = this.maxHP;
         }
-    };
+    },
 
-    this.resetHealth = function() {
+    resetHealth: function () {
         // Reset HP to max HP.
         this.HP = this.maxHP;
-    };
-    
-    this.levelTo = function(newLevel) {
+    },
+
+    levelTo: function (newLevel) {
         // Update the unit stats to average values for newLevel.
 
         // Reset to base stats.
@@ -269,12 +273,12 @@ function Unit(characterJSON) {
 
         // Normalise level and HP.
         this.HP = this.maxHP;
-        this.level = newLevel;
-    };
+//        this.level = newLevel;
+    },
 
-    this.copy = function() {
+    copy: function () {
         // Return a fresh copy of the object.
         return new Unit(this.JSON);
-    };
+    }
 
-}
+};

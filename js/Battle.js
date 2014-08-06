@@ -3,14 +3,18 @@
 // TODO: Add support for poisoning.
 // TODO: Include effects of Luna and Nosferatu.
 
-var Battle = function(unit1, unit2, separation, logToBattle) {
+var Battle = function (unit1, unit2, separation, logToBattle) {
     this.attacker = unit1;
     this.defender = unit2;
     this.separation = separation;
     this.logToBattle = logToBattle;
     this.hasWon = false;
-    
-    this.battleOver = function() {
+
+};
+
+Battle.prototype = {
+
+    battleOver: function () {
         // Return true if battle is not over.
         if (this.hasWon) {
             return true;
@@ -29,11 +33,13 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
         }
 
         return false;
-    };
+    },
 
-    this.round = function() {
+    round: function () {
         // Simulate one round of battle.
         if (this.battleOver()) return;
+
+        var logToBattle = this.logToBattle;
 
         var attackerHitChance;
         var attackerDamage;
@@ -42,8 +48,8 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
         var defenderHitChance;
         var defenderDamage;
         var defenderCriticalChance;
-        
-        var attackerRoundOne = function(attacker, defender) {
+
+        var attackerRoundOne = function (attacker, defender) {
             // First attacker round.
             if (percentChance() < attackerHitChance) {
 
@@ -61,8 +67,8 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
                 logToBattle("Attacker " + attacker.name + " misses...");
             }
         };
-        
-        var defenderRoundOne = function(attacker, defender) {
+
+        var defenderRoundOne = function (attacker, defender) {
             // First defender round.
             if (percentChance() < defenderHitChance) {
 
@@ -80,8 +86,8 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
                 logToBattle("Defender " + defender.name + " misses...");
             }
         };
-        
-        var attackerRoundTwo = function(attacker, defender) {
+
+        var attackerRoundTwo = function (attacker, defender) {
             // Second attacker round.
             if (attacker.isRepeatedAttack(defender)) {
 
@@ -102,8 +108,8 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
                 }
             }
         };
-        
-        var defenderRoundTwo = function(attacker, defender) {
+
+        var defenderRoundTwo = function (attacker, defender) {
             // Second defender round.
             if (defender.isRepeatedAttack(attacker)) {
 
@@ -124,7 +130,7 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
                 }
             }
         };
-        
+
         if (this.attacker.inRange(this.defender, this.separation)) {
             attackerHitChance = this.attacker.accuracy(this.defender);
             attackerDamage = this.attacker.damage(this.defender);
@@ -162,7 +168,7 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
 
             if (this.battleOver()) return;
 
-            if(this.defender.weapon.brave) {
+            if (this.defender.weapon.brave) {
                 defenderRoundOne(this.attacker, this.defender);
             }
         }
@@ -212,5 +218,6 @@ var Battle = function(unit1, unit2, separation, logToBattle) {
 
             this.logToBattle("Defender " + this.defender.name + " was healed for a max of " + healing + ".");
         }
-    };
+    }
+
 };

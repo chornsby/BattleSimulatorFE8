@@ -9,11 +9,15 @@ function Job(jobJSON) {
     this.lethal = jobJSON.lethal;
 }
 
-var promotedJobs = ["Eirika Great Lord", "Ephraim Great Lord", "Hero",
-    "Swordmaster", "Rogue", "Assassin", "General", "Warrior", "Beserker",
-    "Sniper", "Ranger", "Paladin", "Great Knight", "Falcon Knight",
-    "Wyvern Lord", "Wyvern Knight", "Bishop", "Valkyrie", "Sage",
-    "Mage Knight", "Druid", "Summoner"];
+Job.prototype = {
 
-var fliers = ["Pegasus Knight", "Falcon Knight", "Wyvern Rider", "Wyvern Lord",
-    "Wyvern Knight"];
+    promotedJobs : ["Eirika Great Lord", "Ephraim Great Lord", "Hero",
+        "Swordmaster", "Rogue", "Assassin", "General", "Warrior", "Beserker",
+        "Sniper", "Ranger", "Paladin", "Great Knight", "Falcon Knight",
+        "Wyvern Lord", "Wyvern Knight", "Bishop", "Valkyrie", "Sage",
+        "Mage Knight", "Druid", "Summoner"],
+
+    fliers : ["Pegasus Knight", "Falcon Knight", "Wyvern Rider", "Wyvern Lord",
+        "Wyvern Knight"]
+
+};
