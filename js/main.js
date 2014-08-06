@@ -147,7 +147,7 @@ $(document).ready(function() {
 
         var i;
 
-        if (promotedJobs.indexOf(unit.baseJob) > -1) {
+        if (Job.prototype.promotedJobs.indexOf(unit.baseJob) > -1) {
 
             $unpromoted.empty();
             $unpromoted.append(new Option("-", 1));
@@ -157,7 +157,7 @@ $(document).ready(function() {
                 $promoted.append(new Option(i, i));
             }
 
-        } else if (promotedJobs.indexOf(unit.job) > -1) {
+        } else if (Job.prototype.promotedJobs.indexOf(unit.job) > -1) {
 
             $unpromoted.empty();
             for (i = 1; i < 21; i++) {
